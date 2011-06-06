@@ -9,6 +9,8 @@ package locadora.model.observer;
  *
  * @author Emerson
  */
+
+//Observador
 public abstract class Observer {
     private Subject subject;
 
