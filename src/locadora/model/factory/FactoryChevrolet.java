@@ -15,7 +15,7 @@ public class FactoryChevrolet implements FactoryAutomovel{
 	public Automovel createAutomovel(String type) {
 	    Automovel carro = null;
 		if(type.equals("Camaro")){
-	    	carro = new Automovel();
+	    	//carro = new Automovel();
 	    }else if(type.equals("Astra")){
 	    	carro = new Astra();
 	    }

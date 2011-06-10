@@ -6,7 +6,7 @@
 <hibernate-mapping>	
 		
 	<class name="Automovel">
-		<id column="" name="id" type="java.lang.Long">
+		<id name="id" type="java.lang.Long">
 			<generator class="increment"></generator>
 		</id>	
 		
@@ -18,7 +18,11 @@
 		<property name="cor"></property>
 		<property name="modelo"></property>
 		<property name="placa"></property>
-		<property name="preco"></property>	
+		<property name="preco"></property>
+		<property name="status"></property>				
+
+		<many-to-one name="Categoria" class="Categoria" column="id" cascade="none">		
+		</many-to-one>		
 		
 	</class>
 

@@ -6,12 +6,10 @@
 package locadora.model.cliente;
 
 import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import locadora.model.desconto.*;
 import locadora.model.observer.*;
 
@@ -22,10 +20,11 @@ import locadora.model.observer.*;
 @Entity
 public abstract class Cliente extends Observer{
 	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+
     private String celular;
     private String cep;
     private String cpf;
