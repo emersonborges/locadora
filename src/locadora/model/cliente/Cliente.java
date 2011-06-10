@@ -7,11 +7,10 @@ package locadora.model.cliente;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import org.hibernate.annotations.Entity;
 
 import locadora.model.desconto.*;
 import locadora.model.observer.*;
