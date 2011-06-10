@@ -7,7 +7,16 @@ package locadora.model.cliente;
 
 import java.util.Date;
 
+<<<<<<< HEAD
 import locadora.model.Pessoa;
+=======
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.Entity;
+
+>>>>>>> 7da7bc457cb93a43ddbf1ea3fdb5497c3a848f04
 import locadora.model.desconto.*;
 import locadora.model.observer.*;
 
@@ -15,8 +24,14 @@ import locadora.model.observer.*;
  *
  * @author Emerson
  */
+@Entity
 public abstract class Cliente extends Observer{
 	
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+
     private String celular;
     private String cep;
     private String cpf;
@@ -129,4 +144,12 @@ public abstract class Cliente extends Observer{
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getId() {
+		return id;
+	}
 }
