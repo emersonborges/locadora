@@ -6,6 +6,8 @@
 package locadora.model.cliente;
 
 import java.util.Date;
+
+import locadora.model.Pessoa;
 import locadora.model.desconto.*;
 import locadora.model.observer.*;
 
@@ -14,6 +16,7 @@ import locadora.model.observer.*;
  * @author Emerson
  */
 public abstract class Cliente extends Observer{
+	
     private String celular;
     private String cep;
     private String cpf;
