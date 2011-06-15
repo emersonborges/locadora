@@ -28,4 +28,10 @@ public abstract class Subject {
             o.update(this);
         }
     }
+
+	public List<Observer> getObservers() {
+		return observers;
+	}
+    
+    
 }

@@ -38,6 +38,8 @@ public abstract class Cliente extends Observer{
     private String telefone;
     Desconto desconto;
     
+    private String updateStatus;
+    
     public double desconto(){
         return this.desconto.desconto();
     }
@@ -145,4 +147,12 @@ public abstract class Cliente extends Observer{
 	public Long getId() {
 		return id;
 	}
+
+	public String getUpdateStatus() {
+		return updateStatus;
+	}
+
+	public void setUpdateStatus(String updateStatus) {
+		this.updateStatus = updateStatus;
+	}	
 }
