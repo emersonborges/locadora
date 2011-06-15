@@ -11,9 +11,15 @@ package locadora.model.desconto;
  * @author Emerson
  */
 public class SemDesconto implements Desconto{
-
-    public double desconto() {
-        return 0;
+	
+	public static final double desconto = 0;
+    
+	public SemDesconto(){
+		super();
+	}
+	
+	public double desconto() {
+        return desconto;
     }
 
 }

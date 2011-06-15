@@ -10,9 +10,15 @@ package locadora.model.desconto;
  * @author Emerson
  */
 public class DescontoVIP implements Desconto{
+	
+	public static final double desconto = 20;
+	
+	public DescontoVIP(){
+		super();
+	}
 
     public double desconto() {
-        return 10;
+        return desconto;
     }
 
 }

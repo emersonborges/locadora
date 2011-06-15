@@ -10,9 +10,14 @@ package locadora.model.desconto;
  * @author Emerson
  */
 public class DescontoGOLD implements Desconto{
-
+	
+	public static final double desconto = 10;
+		
+	public DescontoGOLD(){
+		super();		
+	}
     public double desconto() {
-        return 20;
+        return desconto;
     }
 
 }
