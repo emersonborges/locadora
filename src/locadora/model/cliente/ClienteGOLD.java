@@ -21,7 +21,8 @@ public class ClienteGOLD extends Cliente{
 
     @Override
     public void update(Subject s) {
-        System.out.println("mandando email para o cliente GOLD");
+    	System.out.println("Mandando email - cliente GOLD");
+        this.setUpdateStatus("GOLD");
     }
 
 }

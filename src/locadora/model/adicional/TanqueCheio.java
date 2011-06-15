@@ -10,12 +10,12 @@ import locadora.model.automovel.*;
  *
  * @author Rafael
  */
-public class tanqueCheio extends Adicional {
+public class TanqueCheio extends Adicional {
 
     private double capacidade;
     private double preco;
 
-     public tanqueCheio(Automovel a,double preco,double capacidade){
+     public TanqueCheio(Automovel a,double preco,double capacidade){
         this.automovelDecorado = a;
         this.automovelDecorado.addAdicionais(this);
         this.preco = preco;

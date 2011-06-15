@@ -20,7 +20,8 @@ public class ClienteVIP extends Cliente{
 
     @Override
     public void update(Subject s) {
-        System.out.println("mandando email pro cliente vip!");
+    	System.out.println("Mandando email - cliente VIP");
+    	this.setUpdateStatus("VIP");
     }
 
 }

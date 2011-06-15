@@ -30,13 +30,13 @@ public class Main {
         //teste 2
          Automovel b = new Caminhao();
          b.setPreco(800);
-         b = new tanqueCheio(b, 2.58, 200);
+         b = new TanqueCheio(b, 2.58, 200);
          b = new Seguro(b, 300, 'p');
          System.out.println(b.getPreco());
          //teste 3
          Automovel c = new Moto();
          c.setPreco(800);
-         c = new tanqueCheio(c, 2.58, 20);
+         c = new TanqueCheio(c, 2.58, 20);
          c = new Seguro(c, 300, 'p');
          c = new GPS(c, 70);
          c = new AssentoInfantil(c, 50, 'g');
