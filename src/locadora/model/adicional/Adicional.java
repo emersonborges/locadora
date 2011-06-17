@@ -13,9 +13,19 @@ import locadora.model.automovel.*;
  */
 public abstract class Adicional extends Automovel {
 
-    Automovel automovelDecorado;
+	private Long id;   
+	private Automovel automovelDecorado;    
     private String decricao;
     
+    
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 
     public String getDecricao() {
         return decricao;
@@ -28,5 +38,19 @@ public abstract class Adicional extends Automovel {
     
     @Override
     public abstract double getPreco();
+
+	/**
+	 * @param automovelDecorado the automovelDecorado to set
+	 */
+	public void setAutomovelDecorado(Automovel automovelDecorado) {
+		this.automovelDecorado = automovelDecorado;
+	}
+
+	/**
+	 * @return the automovelDecorado
+	 */
+	public Automovel getAutomovelDecorado() {
+		return automovelDecorado;
+	}
 
 }

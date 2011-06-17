@@ -20,6 +20,15 @@ public class Carro extends Automovel {
     private boolean som;
     private boolean arcondicionado;
     private int nportas;
+    
+    public Carro(int ano, double preco){
+    	setAno(ano);
+    	setPreco(preco);
+    	setAirbag(true);
+    	setSom(true);
+    	setArcondicionado(true);
+    	setNportas(4);
+    }
 
     public boolean isAirbag() {
 		return airbag;

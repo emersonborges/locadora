@@ -28,7 +28,7 @@ public abstract class Automovel extends Subject{
     private Enum<Combustivel> combustivel;
     private String placa;
     private double preco;
-    private Enum<Status> status;
+    private String status;
    
     
     
@@ -56,7 +56,7 @@ public abstract class Automovel extends Subject{
 		this.ano = ano;
 	}
 
-	public int getCapacidade() {
+	public double getCapacidade() {
 		return capacidade;
 	}
 
@@ -121,7 +121,7 @@ public abstract class Automovel extends Subject{
 	}
 
 	public Boolean estaDisponivel(){
-        if (this.status.equals(Status.disponivel))
+        if (this.status=="disponivel")
             return true;
         return false;
     }
@@ -146,12 +146,15 @@ public abstract class Automovel extends Subject{
         adicionais.add(a);
     }
 
-    public String getStatus(){
-        return this.status.toString();
-    }
-    public void setStatus(Enum<Status> status) {
-        this.status = status;
-        this.notifica();
-    }
+   
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+  
 
 }

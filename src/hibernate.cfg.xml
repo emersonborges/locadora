@@ -3,7 +3,7 @@
 	<session-factory>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost/locadora</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/locadora?createDatabaseIfNotExist=true</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">jefferson</property>
 
@@ -21,6 +21,10 @@
 
 		<mapping resource="Automovel.hbm.xml" />
 		<mapping resource="Carro.hbm.xml" />
+		<mapping resource="Adicional.hbm.xml" />
+		<mapping resource="Gps.hbm.xml" />
+		<mapping resource="Seguro.hbm.xml" />
+		<mapping resource="TanqueCheio.hbm.xml" />
 		
 		
 	</session-factory>
