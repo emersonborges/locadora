@@ -17,6 +17,7 @@ public abstract class Automovel extends Subject{
 
     List<Automovel> adicionais = new ArrayList<Automovel>();
 
+    private Long id;
     private int ano;
     private int capacidade;
     private String chassi;
@@ -31,7 +32,15 @@ public abstract class Automovel extends Subject{
    
     
     
-    public List<Automovel> getAdicionais() {
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public List<Automovel> getAdicionais() {
 		return adicionais;
 	}
 

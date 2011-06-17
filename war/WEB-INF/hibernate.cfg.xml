@@ -20,7 +20,6 @@
 		<property name="hibernate.use_sql_comments">true</property>
 
 		<mapping resource="Automovel.hbm.xml" />
-		<mapping resource="Carro.hbm.xml" />
 		
 		
 	</session-factory>

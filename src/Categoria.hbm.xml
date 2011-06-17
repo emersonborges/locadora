@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "
+-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
+
+<hibernate-mapping>	
+	
+	<class name="locadora.model.automovel.Categoria">
+	
+		<id name="id" type="java.lang.Long">
+			<generator class="increment"></generator>
+		</id>	
+		
+		<property name="codCategoria"></property>
+		<property name="precoDiario"></property>
+		<property name="precoMensal"></property>
+		<property name="precoSemanal"></property>
+		<property name="quantidade"></property>
+		
+		
+		
+	</class>
+			
+	
+
+</hibernate-mapping>
