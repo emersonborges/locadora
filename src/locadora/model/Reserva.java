@@ -2,15 +2,8 @@ package locadora.model;
 
 import java.util.Date;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-import javax.persistence.Entity;
 
-@Entity
-@Table(name= "reserva")
 public class Reserva {
 
 	private Long id;
@@ -18,6 +11,15 @@ public class Reserva {
 	private Date dataRetirada;
 	private Double multa;
 	private Double valor;
+	
+	public Reserva(Date dateDevolucao, Date dateRetirada, double multa, double valor){
+		
+		this.dataDevolucao =  dateDevolucao;
+		this.dataRetirada =  dateRetirada;
+		this.multa =  multa;
+		this.valor = valor;
+		
+	}
 	
 	public Date getDataDevolucao() {
 		return dataDevolucao;
@@ -56,8 +58,7 @@ public class Reserva {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	public Long getId() {
 		return id;
 	}
