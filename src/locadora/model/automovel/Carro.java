@@ -19,6 +19,7 @@ public class Carro extends Automovel {
     private boolean arcondicionado;
     private int nportas;
 
+   
 
     public void setAirbag(boolean airbag) {
         this.airbag = airbag;
