@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/06/2011 15:05:25 by Hibernate Tools 3.4.0.CR1 -->
+
+<hibernate-mapping>
+    <class name="locadora.model.Pessoa" table="pessoa" abstract="true">
+        <id name="id" type="java.lang.Long">
+            <generator class="increment"></generator>
+        </id>
+        <property name="celular" type="java.lang.String">
+            <column name="CELULAR" />
+        </property>
+        <property name="cep" type="java.lang.String">
+            <column name="CEP" />
+        </property>
+        <property name="cpf" type="java.lang.String">
+            <column name="CPF" />
+        </property>
+        <property name="dataNascimento" type="java.util.Date">
+            <column name="DATANASCIMENTO" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="endereco" type="java.lang.String">
+            <column name="ENDERECO" />
+        </property>
+        <property name="nome" type="java.lang.String">
+            <column name="NOME" />
+        </property>
+        <property name="nomeMae" type="java.lang.String">
+            <column name="NOMEMAE" />
+        </property>
+        <property name="nomePai" type="java.lang.String">
+            <column name="NOMEPAI" />
+        </property>
+        <property name="rg" type="java.lang.String">
+            <column name="RG" />
+        </property>
+        <property name="telefone" type="java.lang.String">
+            <column name="TELEFONE" />
+        </property>
+        
+        
+        
+    </class>
+    
+</hibernate-mapping>
