@@ -14,6 +14,10 @@ import locadora.model.automovel.Automovel;
 public class Moto extends Automovel{
 
     private int cilindradas;
+    
+    public Moto(int cili){
+    	this.cilindradas = cili;
+    }
 
     public int getCilindradas() {
         return cilindradas;

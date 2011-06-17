@@ -25,12 +25,11 @@ public abstract class Automovel extends Subject{
     private int consumo;
     private String cor;//não tem pq usar o tipo color
     private int modelo;
-    private Enum<Combustivel> combustivel;
+    private String combustivel;
     private String placa;
     private double preco;
     private String status;
    
-    
     
     public Long getId() {
 		return id;
@@ -104,11 +103,13 @@ public abstract class Automovel extends Subject{
 		this.modelo = modelo;
 	}
 
-	public Enum<Combustivel> getCombustivel() {
+	
+
+	public String getCombustivel() {
 		return combustivel;
 	}
 
-	public void setCombustivel(Enum<Combustivel> combustivel) {
+	public void setCombustivel(String combustivel) {
 		this.combustivel = combustivel;
 	}
 

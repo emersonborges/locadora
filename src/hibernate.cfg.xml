@@ -25,6 +25,8 @@
 		<mapping resource="Gps.hbm.xml" />
 		<mapping resource="Seguro.hbm.xml" />
 		<mapping resource="TanqueCheio.hbm.xml" />
+		<mapping resource="Caminhao.hbm.xml" />
+		<mapping resource="Moto.hbm.xml" />
 		
 		
 	</session-factory>
