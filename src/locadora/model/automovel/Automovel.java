@@ -25,12 +25,11 @@ public abstract class Automovel extends Subject{
     private int consumo;
     private String cor;//não tem pq usar o tipo color
     private int modelo;
-    private Enum<Combustivel> combustivel;
+    private String combustivel;
     private String placa;
     private double preco;
-    private Enum<Status> status;
+    private String status;
    
-    
     
     public Long getId() {
 		return id;
@@ -56,7 +55,7 @@ public abstract class Automovel extends Subject{
 		this.ano = ano;
 	}
 
-	public int getCapacidade() {
+	public double getCapacidade() {
 		return capacidade;
 	}
 
@@ -104,11 +103,13 @@ public abstract class Automovel extends Subject{
 		this.modelo = modelo;
 	}
 
-	public Enum<Combustivel> getCombustivel() {
+	
+
+	public String getCombustivel() {
 		return combustivel;
 	}
 
-	public void setCombustivel(Enum<Combustivel> combustivel) {
+	public void setCombustivel(String combustivel) {
 		this.combustivel = combustivel;
 	}
 
@@ -121,7 +122,7 @@ public abstract class Automovel extends Subject{
 	}
 
 	public Boolean estaDisponivel(){
-        if (this.status.equals(Status.disponivel))
+        if (this.status=="disponivel")
             return true;
         return false;
     }
@@ -146,12 +147,15 @@ public abstract class Automovel extends Subject{
         adicionais.add(a);
     }
 
-    public String getStatus(){
-        return this.status.toString();
-    }
-    public void setStatus(Enum<Status> status) {
-        this.status = status;
-        this.notifica();
-    }
+   
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+  
 
 }

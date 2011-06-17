@@ -16,8 +16,8 @@ public class TanqueCheio extends Adicional {
     private double preco;
 
      public TanqueCheio(Automovel a,double preco,double capacidade){
-        this.automovelDecorado = a;
-        this.automovelDecorado.addAdicionais(this);
+        this.setAutomovelDecorado(a);
+        this.getAutomovelDecorado().addAdicionais(this);
         this.preco = preco;
         this.capacidade=capacidade;
 
@@ -26,24 +26,21 @@ public class TanqueCheio extends Adicional {
     }
 
      public double getPreco() {
-        return preco + automovelDecorado.getPreco();
-    }
-/*
-    public double getTotal(){
-        return preco*capacidade;
+        return preco + getAutomovelDecorado().getPreco();
     }
 
-    public int getCapacidade() {
-        return capacidade;
-    }
+	
 
-    public void setCapacidade(int capacidade) {
-        this.capacidade = capacidade;
-    }
+	public double getCapacidade() {
+		return (double) capacidade;
+	}
 
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-*/
+	public void setCapacidade(double capacidade) {
+		this.capacidade = capacidade;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
 
 }

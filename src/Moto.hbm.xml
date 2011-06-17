@@ -5,14 +5,12 @@
 
 <hibernate-mapping>
 	
-		<joined-subclass name="locadora.model.automovel.Carro" extends="locadora.model.automovel.Automovel">
+		<joined-subclass name="locadora.model.automovel.Moto" extends="locadora.model.automovel.Automovel">
 			<key column="Automovel_id"/>
 		
-			<property name="airbag"></property>
-			<property name="som"></property>
-			<property name="arcondicionado"></property>
-			<property name="nportas"></property>		
-		
+			<property name="cilindradas"></property>
+			   					
 		</joined-subclass>
+		
 
 </hibernate-mapping>

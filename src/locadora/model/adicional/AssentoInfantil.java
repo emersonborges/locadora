@@ -32,8 +32,8 @@ public class AssentoInfantil extends Adicional{
     }
 
     public AssentoInfantil(Automovel a,double preco,char tamanho){
-        this.automovelDecorado = a;
-        this.automovelDecorado.addAdicionais(this);
+        this.setAutomovelDecorado(a);
+        this.getAutomovelDecorado().addAdicionais(this);
         this.preco = preco;
          if(tamanho=='p')
             this.tamanho=Tamanho.P;
@@ -45,7 +45,7 @@ public class AssentoInfantil extends Adicional{
     }
 
     public double getPreco() {
-        return this.preco + automovelDecorado.getPreco();
+        return this.preco + getAutomovelDecorado().getPreco();
     }
 
     /*@Override
