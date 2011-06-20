@@ -46,6 +46,10 @@ public class Caminhao extends Automovel{
     public void setPeso(float peso) {
         this.peso = peso;
     }
+    
+    public Caminhao(){
+    	super();
+    }
 
     
 

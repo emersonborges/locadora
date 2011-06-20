@@ -4,7 +4,7 @@ import java.util.List;
 
 import locadora.model.automovel.Categoria;
 
-public class CategoriaHibernate implements CategoriaDao {
+public class CategoriaDaoImpl implements CategoriaDao {
 
 	@Override
 	public void inserir(Categoria categoria) {

@@ -2,13 +2,20 @@ package locadora.persistence.hibernate;
 
 import java.util.List;
 
+import org.hibernate.Transaction;
+import org.hibernate.classic.Session;
+
 import locadora.model.automovel.Automovel;
 
-public class AutomovelHibernate implements AutomovelDao {
+public class AutomovelDaoImpl implements AutomovelDao {
 
 	@Override
 	public void inserir(Automovel automovel) {
-		// TODO Auto-generated method stub
+		Session session = MyHibernateSingleton.getInstance().openSession();
+		Transaction transaction = session.beginTransaction();		
+		session.save(automovel);		
+		transaction.commit();
+		session.close();
 		
 	}
 

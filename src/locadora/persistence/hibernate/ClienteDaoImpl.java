@@ -2,30 +2,30 @@ package locadora.persistence.hibernate;
 
 import java.util.List;
 
-import locadora.model.Funcionario;
+import locadora.model.cliente.Cliente;
 
-public class FuncionarioHibernate implements FuncionarioDao{
+public class ClienteDaoImpl implements ClienteDao{
 
 	@Override
-	public void inserir(Funcionario funcionario) {
+	public void inserir(Cliente cliente) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void editar(Funcionario funcionario) {
+	public void editar(Cliente cliente) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<Funcionario> listar() {
+	public List<Cliente> listar() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void remover(Funcionario funcionario) {
+	public void remover(Cliente cliente) {
 		// TODO Auto-generated method stub
 		
 	}

@@ -36,7 +36,7 @@ public class CarrosTestChevrolet {
 		assertEquals(2009, astra.getAno());
 		assertEquals(25000, astra.getPreco(), 0);				
 		assertEquals("alugado", astra.getStatus());
-		astra.setStatus(Status.disponivel);
+		astra.setStatus("disponivel");
 		assertEquals("disponivel", astra.getStatus());
 	}
 	
@@ -47,7 +47,7 @@ public class CarrosTestChevrolet {
 		assertEquals(2009, celta.getAno());
 		assertEquals(10000, celta.getPreco(), 0);				
 		assertEquals("alugado", celta.getStatus());
-		celta.setStatus(Status.disponivel);
+		celta.setStatus("disponivel");
 		assertEquals("disponivel", celta.getStatus());
 	}
 	
@@ -58,7 +58,7 @@ public class CarrosTestChevrolet {
 		assertEquals(2009, meriva.getAno());
 		assertEquals(32000, meriva.getPreco(), 0);				
 		assertEquals("alugado", meriva.getStatus());
-		meriva.setStatus(Status.disponivel);
+		meriva.setStatus("disponivel");
 		assertEquals("disponivel", meriva.getStatus());
 	}
 	
@@ -69,7 +69,7 @@ public class CarrosTestChevrolet {
 		assertEquals(2007, montana.getAno());
 		assertEquals(25000, montana.getPreco(), 0);				
 		assertEquals("alugado", montana.getStatus());
-		montana.setStatus(Status.disponivel);
+		montana.setStatus("disponivel");
 		assertEquals("disponivel", montana.getStatus());
 	}
 	
@@ -80,7 +80,7 @@ public class CarrosTestChevrolet {
 		assertEquals(2008, zafira.getAno());
 		assertEquals(22000, zafira.getPreco(), 0);				
 		assertEquals("manutencao", zafira.getStatus());
-		zafira.setStatus(Status.disponivel);
+		zafira.setStatus("disponivel");
 		assertEquals("disponivel", zafira.getStatus());
 	}
 	

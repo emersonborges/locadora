@@ -53,4 +53,11 @@ public abstract class Adicional extends Automovel {
 		return automovelDecorado;
 	}
 
+	@Override
+	public String toString() {
+		return "Adicional [id=" + id + ", decricao=" + decricao + "]";
+	}
+	
+	
+
 }

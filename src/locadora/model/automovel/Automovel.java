@@ -31,6 +31,7 @@ public abstract class Automovel extends Subject{
     private String status;
    
     
+    
     public Long getId() {
 		return id;
 	}
@@ -55,7 +56,9 @@ public abstract class Automovel extends Subject{
 		this.ano = ano;
 	}
 
-	public double getCapacidade() {
+	
+
+	public int getCapacidade() {
 		return capacidade;
 	}
 

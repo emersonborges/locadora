@@ -2,30 +2,30 @@ package locadora.persistence.hibernate;
 
 import java.util.List;
 
-import locadora.model.Reserva;
+import locadora.model.Locacao;
 
-public class ReservaHibernate implements ReservaDao{
+public class LocacaoDaoImpl implements LocacaoDao{
 
 	@Override
-	public void inserir(Reserva reserva) {
+	public void inserir(Locacao locacao) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void editar(Reserva reserva) {
+	public void editar(Locacao locacao) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<Reserva> listar() {
+	public List<Locacao> listar() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void remover(Reserva reserva) {
+	public void remover(Locacao locacao) {
 		// TODO Auto-generated method stub
 		
 	}

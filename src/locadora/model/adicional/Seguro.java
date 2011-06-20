@@ -16,6 +16,10 @@ public class Seguro extends Adicional{
     private char tipo;
     private String descricao;
 
+    public Seguro(){
+    	super();
+    }
+    
     public enum Tipo{
         parcial,total;
     }  

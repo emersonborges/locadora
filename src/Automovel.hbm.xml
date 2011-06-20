@@ -21,8 +21,8 @@
 		<property name="preco"></property>
 		<property name="status"></property>				
 
-		<!--  <many-to-one name="locadora.model.automovel.Categoria" class="Categoria" column="id" cascade="none">		
-		</many-to-one>		 -->
+	 <!--  <many-to-one name="locadora.model.adicional.Adicional" class="Adicional" column="id" cascade="none">		
+	  </many-to-one>  --> 
 		
 	</class>
 
