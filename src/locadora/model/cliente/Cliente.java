@@ -55,4 +55,7 @@ public abstract class Cliente extends Pessoa{
 	public String getCidade() {
 		return cidade;
 	}	
+	public Cliente(){
+		super();
+	}
 }

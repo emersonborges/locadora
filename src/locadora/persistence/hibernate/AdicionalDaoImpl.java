@@ -51,7 +51,7 @@ public class AdicionalDaoImpl implements AdicionalDao {
 	@Override
 	public void remover(Adicional adicional) {
 	
-		
+		System.out.println("Falta Implementar");
 		
 	}
 

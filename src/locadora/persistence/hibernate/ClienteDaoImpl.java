@@ -26,7 +26,7 @@ public class ClienteDaoImpl implements ClienteDao{
 
 	@Override
 	public void remover(Cliente cliente) {
-		// TODO Auto-generated method stub
+		System.out.println("Falta Implementar");
 		
 	}
 
