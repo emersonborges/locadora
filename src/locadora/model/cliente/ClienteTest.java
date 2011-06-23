@@ -14,8 +14,9 @@ public class ClienteTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ClienteNormal cliente = new ClienteNormal("pedro", "UDI");
+		//ClienteNormal cliente = new ClienteNormal("pedro", "UDI");
 		SemDesconto desconto = new SemDesconto();
+		desconto.setDesconto(10);
 
 		Session session = MyHibernateSingleton.getInstance().openSession();
 		Transaction transaction = session.beginTransaction();

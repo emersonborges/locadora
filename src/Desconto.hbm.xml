@@ -5,9 +5,25 @@
 
 <hibernate-mapping>
     <class name="locadora.model.desconto.Desconto" abstract="true">
+       
         <id name="id" type="java.lang.Long">
             <generator class="increment"></generator>
         </id>
+        
+         <discriminator column="Desconto_tipo" type="string"/>
+              
+        
+        <subclass name="locadora.model.desconto.SemDesconto" discriminator-value="SemDesconto">
+          <property name="desconto"/>     
+        </subclass>
+        
+        <subclass name="locadora.model.desconto.DescontoGOLD" discriminator-value="DescontoGold">
+          <property name="desconto"/>     
+        </subclass>
+             
+         <subclass name="locadora.model.desconto.DescontoVIP" discriminator-value="DescontoVip">
+          <property name="desconto"/>     
+        </subclass>     
              
     </class>
       

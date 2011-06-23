@@ -11,7 +11,11 @@ package locadora.model.desconto;
  */
 public class DescontoVIP extends Desconto{
 	
-	public static final double desconto = 20;
+	private double desconto;
+	
+	public DescontoVIP(double desconto){
+		this.desconto = desconto;
+	}
 	
 	public DescontoVIP(){
 		super();
@@ -21,4 +25,13 @@ public class DescontoVIP extends Desconto{
         return desconto;
     }
 
+	public double getDesconto() {
+		return desconto;
+	}
+
+	public void setDesconto(double desconto) {
+		this.desconto = desconto;
+	}
+
+    
 }

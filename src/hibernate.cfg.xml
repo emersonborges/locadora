@@ -31,7 +31,7 @@
 		<mapping resource="Cliente.hbm.xml" />
 		<mapping resource="ClienteNormal.hbm.xml" />
 		<mapping resource="Desconto.hbm.xml" />
-		<mapping resource="SemDesconto.hbm.xml" />
+		
 		<mapping resource="Reserva.hbm.xml" />
 		
 		
