@@ -5,16 +5,23 @@
 
 <hibernate-mapping>	
 		
-	<class name="locadora.model.automovel.Automovel">
+	<class name="locadora.model.Reserva">
 		<id name="id" type="java.lang.Long">
 			<generator class="increment"></generator>
 		</id>	
 		
-		<property name=""/>	
+		<property name="dataDevolucao"/>	
+		<property name="dataRetirada"/>
+		<property name="multa"/>	
+		<property name="valor"/>  
+		
+	
+	    <one-to-one name="cliente" class="locadora.model.cliente.Cliente" constrained="true" cascade="save-update"/>	    
+	
+	    
+	    <one-to-one name="Automovel" class="locadora.model.automovel.Automovel" constrained="true" cascade="save-update">
+	    </one-to-one>
 				
-
-		<!--  <many-to-one name="locadora.model.automovel.Categoria" class="Categoria" column="id" cascade="none">		
-		</many-to-one>		 -->
 		
 	</class>
 

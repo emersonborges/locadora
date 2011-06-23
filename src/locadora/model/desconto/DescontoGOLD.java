@@ -9,7 +9,7 @@ package locadora.model.desconto;
  *
  * @author Emerson
  */
-public class DescontoGOLD implements Desconto{
+public class DescontoGOLD extends Desconto{
 	
 	public static final double desconto = 10;
 		

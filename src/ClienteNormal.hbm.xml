@@ -3,12 +3,13 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 17/06/2011 15:08:10 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <joined-subclass name="locadora.model.cliente.Cliente" extends="locadora.model.Pessoa" abstract="true">
+    <joined-subclass name="locadora.model.cliente.ClienteNormal" extends="locadora.model.cliente.Cliente" abstract="true">
         
-        <key column="id"/>
+        <key column="id"/>        
+              
+        <one-to-one name="desconto" class="locadora.model.desconto.Desconto" cascade="none">        
+        </one-to-one>
         
-        <property name="cidade" type="java.lang.String"/>
-       
         
     </joined-subclass>
 </hibernate-mapping>

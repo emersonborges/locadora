@@ -24,14 +24,17 @@ public class TesteDaos {
 		Session session = MyHibernateSingleton.getInstance().openSession();
 		Transaction transaction = session.beginTransaction();	
 		
-		Criteria criteria = session.createCriteria(Adicional.class);
+/*		Criteria criteria = session.createCriteria(Adicional.class);
 		List<Adicional> adicionais = criteria.addOrder(Order.asc("decricao")).list();
 		
 		System.out.println("**************************************");
 		for(Adicional adicional:adicionais){
 			System.out.println(adicional);
 		}
-		System.out.println("**************************************");
+		System.out.println("**************************************");*/
+		
+		
+		
 		transaction.commit();
 		session.close();
 		

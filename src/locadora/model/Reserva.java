@@ -2,6 +2,9 @@ package locadora.model;
 
 import java.util.Date;
 
+import locadora.model.automovel.Automovel;
+import locadora.model.cliente.Cliente;
+
 
 
 public class Reserva {
@@ -12,8 +15,18 @@ public class Reserva {
 	private Double multa;
 	private Double valor;
 	
-	public Reserva(Date dateDevolucao, Date dateRetirada, double multa, double valor){
-		
+	private Cliente cliente;
+	private Automovel automovel;
+	
+	public Reserva(Cliente c, Automovel a, double valor){
+		this.cliente = c;
+		this.automovel = a;
+		this.valor = valor;
+	}
+	
+	public Reserva(Cliente c, Automovel a, Date dateDevolucao, Date dateRetirada, double multa, double valor){
+		this.cliente = c;
+		this.automovel = a;
 		this.dataDevolucao =  dateDevolucao;
 		this.dataRetirada =  dateRetirada;
 		this.multa =  multa;
@@ -62,5 +75,22 @@ public class Reserva {
 	public Long getId() {
 		return id;
 	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Automovel getAutomovel() {
+		return automovel;
+	}
+
+	public void setAutomovel(Automovel automovel) {
+		this.automovel = automovel;
+	}
+	
 	
 }

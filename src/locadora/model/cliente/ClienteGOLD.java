@@ -15,8 +15,10 @@ import locadora.model.observer.*;
  */
 public class ClienteGOLD extends Cliente{
 
+	private Desconto desconto;
+	
     public ClienteGOLD(){
-        this.desconto = new DescontoGOLD();
+        this.setDesconto(new DescontoGOLD());
     }
 
     @Override
@@ -24,5 +26,19 @@ public class ClienteGOLD extends Cliente{
     	System.out.println("Mandando email - cliente GOLD");
         this.setUpdateStatus("GOLD");
     }
+
+	/**
+	 * @param desconto the desconto to set
+	 */
+	public void setDesconto(Desconto desconto) {
+		this.desconto = desconto;
+	}
+
+	/**
+	 * @return the desconto
+	 */
+	public Desconto getDesconto() {
+		return desconto;
+	}
 
 }
