@@ -1,13 +1,19 @@
 package locadora.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Devolucao {
 	
 	private Long id;
-	private Reserva reserva;
 	private Funcionario funcionario;
 	
+	private Set<Reserva> reservas = new HashSet<Reserva>();
+	            
+	
+	
 	public Devolucao(Reserva r, Funcionario f){
-		this.reserva = r;
+	
 		this.funcionario = f;
 	}
 	
@@ -20,19 +26,7 @@ public class Devolucao {
 		
 	}
 
-	/**
-	 * @param reserva the reserva to set
-	 */
-	public void setReserva(Reserva reserva) {
-		this.reserva = reserva;
-	}
 
-	/**
-	 * @return the reserva
-	 */
-	public Reserva getReserva() {
-		return reserva;
-	}
 
 	/**
 	 * @param funcionario the funcionario to set
@@ -60,5 +54,19 @@ public class Devolucao {
 	 */
 	public Long getId() {
 		return id;
+	}
+
+	/**
+	 * @param reservas the reservas to set
+	 */
+	public void setReservas(Set<Reserva> reservas) {
+		this.reservas = reservas;
+	}
+
+	/**
+	 * @return the reservas
+	 */
+	public Set<Reserva> getReservas() {
+		return reservas;
 	}
 }

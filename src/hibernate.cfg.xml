@@ -35,6 +35,7 @@
 		<mapping resource="Reserva.hbm.xml" />
 		
 		<mapping resource="Locacao.hbm.xml" />
+		<mapping resource="Devolucao.hbm.xml" />
 		<mapping resource="Funcionario.hbm.xml" />
 		
 		

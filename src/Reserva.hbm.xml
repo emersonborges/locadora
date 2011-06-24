@@ -16,6 +16,7 @@
 		<property name="valor"/>  
 		
 	
+	
 	    <one-to-one name="cliente" class="locadora.model.Pessoa" constrained="true" cascade="save-update"/>	    
 	
 	    
