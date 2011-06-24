@@ -6,7 +6,7 @@
 <hibernate-mapping>	
 		
 	<class name="locadora.model.automovel.Automovel">
-		<id name="id" type="java.lang.Long">
+		<id name="id" column="automovel_id" type="java.lang.Long">
 			<generator class="increment"></generator>
 		</id>	
 		
@@ -21,9 +21,22 @@
 		<property name="preco"></property>
 		<property name="status"></property>				
 
-	 <!--  <many-to-one name="locadora.model.adicional.Adicional" class="Adicional" column="id" cascade="none">		
-	  </many-to-one>  --> 
-		
+	   <!--  <many-to-one name="adicionais" class="locadora.model.adicional.Adicional" foreign-key="adicional_id" cascade="save-update">		
+	    </many-to-one>  --> 
+	    
+	 <!--  <many-to-one name="categorias" foreign-key="ategoria_id" cascade="save-update" >	    
+	    </many-to-one> -->  
+	  
+	 <set name="categorias" table="CategoriaAutomovel" inverse="true">
+			<key column="automovel_id"/>
+			<many-to-many class="locadora.model.automovel.Categoria" column="categoria_id"  />
+	  </set>  
+	  
+	  <set name="adicionais" table="AdicionaisAutomovel" inverse="true">
+			<key column="automovel_id"/>
+			<many-to-many class="locadora.model.adicional.Adicional" column="adicional_id" />
+	  </set>   
+	  		
 	</class>
 
 </hibernate-mapping>

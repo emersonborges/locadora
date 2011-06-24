@@ -1,7 +1,10 @@
 package locadora.model.automovel;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 import locadora.model.observer.*;
 
 /*
@@ -15,8 +18,11 @@ import locadora.model.observer.*;
  */
 public abstract class Automovel extends Subject{
 
-    List<Automovel> adicionais = new ArrayList<Automovel>();
-
+  /* List<Automovel> adicionais = new ArrayList<Automovel>();
+   List<Categoria> categorias = new ArrayList<Categoria>();*/
+    private Set adicionais = new HashSet();
+	private Set categorias = new HashSet();
+	
     private Long id;
     private int ano;
     private int capacidade;
@@ -29,10 +35,28 @@ public abstract class Automovel extends Subject{
     private String placa;
     private double preco;
     private String status;
+    
    
     
     
-    public Long getId() {
+  
+	public Set getAdicionais() {
+		return adicionais;
+	}
+
+	public void setAdicionais(Set adicionais) {
+		this.adicionais = adicionais;
+	}
+
+	public Set getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(Set categorias) {
+		this.categorias = categorias;
+	}
+
+	public Long getId() {
 		return id;
 	}
 
@@ -40,13 +64,15 @@ public abstract class Automovel extends Subject{
 		this.id = id;
 	}
 
-	public List<Automovel> getAdicionais() {
+		
+
+	/*public List<Automovel> getAdicionais() {
 		return adicionais;
 	}
 
 	public void setAdicionais(List<Automovel> adicionais) {
 		this.adicionais = adicionais;
-	}
+	}*/
 
 	public int getAno() {
 		return ano;

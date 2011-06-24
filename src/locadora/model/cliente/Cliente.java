@@ -23,8 +23,8 @@ import locadora.model.observer.*;
 public abstract class Cliente extends Pessoa{
 	    
 	
-	private String cidade;
 	private String updateStatus;
+	private Date clienteDesde; // data de cadastro do cliente
 	
 	public String getUpdateStatus() {
 		return updateStatus;
@@ -32,16 +32,24 @@ public abstract class Cliente extends Pessoa{
 
 	public void setUpdateStatus(String updateStatus) {
 		this.updateStatus = updateStatus;
-	}
-
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-
-	public String getCidade() {
-		return cidade;
 	}	
 	public Cliente(){
 		super();
 	}
+
+	/**
+	 * @param clienteDesde the clienteDesde to set
+	 */
+	public void setClienteDesde(Date clienteDesde) {
+		this.clienteDesde = clienteDesde;
+	}
+
+	/**
+	 * @return the clienteDesde
+	 */
+	public Date getClienteDesde() {
+		return clienteDesde;
+	}
+	
+	
 }

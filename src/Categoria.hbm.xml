@@ -7,7 +7,7 @@
 	
 	<class name="locadora.model.automovel.Categoria">
 	
-		<id name="id" type="java.lang.Long">
+		<id name="id" column="categoria_id" type="java.lang.Long">
 			<generator class="increment"></generator>
 		</id>	
 		
@@ -17,7 +17,10 @@
 		<property name="precoSemanal"></property>
 		<property name="quantidade"></property>
 		
-		
+		 <set name="automoveis" table="CategoriaAutomovel">
+			<key column="categoria_id"/>
+			<many-to-many class="locadora.model.automovel.Automovel" column="automovel_id"/>
+		</set> 
 		
 	</class>
 			

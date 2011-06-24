@@ -15,8 +15,12 @@ public class Reserva {
 	private Double multa;
 	private Double valor;
 	
-	private Cliente cliente;
+	private Pessoa cliente;
 	private Automovel automovel;
+	
+	public Reserva(){
+		super();
+	}
 	
 	public Reserva(Cliente c, Automovel a, double valor){
 		this.cliente = c;
@@ -74,13 +78,13 @@ public class Reserva {
 	
 	public Long getId() {
 		return id;
-	}
+	}	
 
-	public Cliente getCliente() {
+	public Pessoa getCliente() {
 		return cliente;
 	}
 
-	public void setCliente(Cliente cliente) {
+	public void setCliente(Pessoa cliente) {
 		this.cliente = cliente;
 	}
 

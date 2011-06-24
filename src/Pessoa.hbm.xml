@@ -5,9 +5,13 @@
 
 <hibernate-mapping>
     <class name="locadora.model.Pessoa" table="Pessoa" abstract="true">
-        <id name="id" type="java.lang.Long">
-            <generator class="increment"></generator>
-        </id>
+        <id name="id" type="java.lang.Long">           
+                              
+        </id>          
+        
+        
+        <discriminator column="TIPO" type="string"></discriminator>      
+         
         <property name="celular" type="java.lang.String">
             <column name="CELULAR" />
         </property>
@@ -42,7 +46,21 @@
             <column name="TELEFONE" />
         </property>
         
+        <one-to-one name="desconto" foreign-key="desconto_id" class="locadora.model.desconto.Desconto" constrained="true" cascade="save-update"></one-to-one>
         
+       <subclass name="locadora.model.cliente.ClienteNormal" discriminator-value="NORMAL">
+       
+       </subclass>    
+       
+       <subclass name="locadora.model.cliente.ClienteVIP" discriminator-value="VIP">
+       
+       </subclass>    
+       
+       <subclass name="locadora.model.cliente.ClienteGOLD" discriminator-value="GOLD">
+       
+       </subclass>    
+        
+       
         
     </class>
     

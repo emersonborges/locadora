@@ -5,6 +5,9 @@
 
 package locadora.model.cliente;
 
+import java.util.Date;
+
+import locadora.model.Pessoa;
 import locadora.model.desconto.*;
 import locadora.model.observer.*;
 
@@ -12,10 +15,10 @@ import locadora.model.observer.*;
  *
  * @author Emerson
  */
-public class ClienteNormal extends Cliente{	
+public class ClienteNormal extends Pessoa{	
 	
 	private Desconto desconto;
-
+	
 	public ClienteNormal(String n, String c){
 		setNome(n);
 		setCidade(c);
@@ -25,11 +28,9 @@ public class ClienteNormal extends Cliente{
     public ClienteNormal(){
          super();
     }
-    
     @Override
     public void update(Subject s) {
     	System.out.println("Mandando email - cliente Normal");
-    	this.setUpdateStatus("NORMAL");
     }
 
 	/**
@@ -45,5 +46,8 @@ public class ClienteNormal extends Cliente{
 	public Desconto getDesconto() {
 		return desconto;
 	}
+
+	
+	
 
 }
