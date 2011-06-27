@@ -5,7 +5,7 @@ import locadora.model.adicional.GPS;
 import locadora.model.automovel.Automovel;
 import locadora.model.automovel.Carro;
 import locadora.persistence.hibernate.AdicionalDaoImpl;
-import locadora.persistence.hibernate.ClienteDaoImpl;
+import locadora.persistence.hibernate.PessoaDaoImpl;
 
 public class TesteFabricaDao {
 	
@@ -15,7 +15,7 @@ public class TesteFabricaDao {
 		// formas de criar daos ...
 		
 		AdicionalDaoImpl adicionalDaoImpl = (AdicionalDaoImpl) daoFactory.createDao("AdicionalDao");		
-		ClienteDaoImpl clienteDaoImpl = (ClienteDaoImpl) daoFactory.createDao("ClienteDao");
+		PessoaDaoImpl clienteDaoImpl = (PessoaDaoImpl) daoFactory.createDao("ClienteDao");
 		
 		
 		Automovel carro = new Carro(2011,20000);      

@@ -4,24 +4,25 @@ import java.util.List;
 
 import org.junit.Test;
 
+import locadora.model.Pessoa;
 import locadora.model.cliente.Cliente;
 import locadora.model.cliente.ClienteNormal;
-import locadora.persistence.hibernate.ClienteDaoImpl;
+import locadora.persistence.hibernate.PessoaDaoImpl;
 import locadora.persistence.hibernate.factory.DaoFactory;
 
 import static org.junit.Assert.*;
 
-public class TestClienteDaoImpl {
+public class TestPessoaDaoImpl {
 
 	
 	@Test
 	public void inserirTest() throws Exception{
 		
-		ClienteDaoImpl daoImpl = (ClienteDaoImpl) DaoFactory.getInstance().createDao("ClienteDao");
-		assertNotNull(daoImpl);
-		ClienteNormal  cliente = new ClienteNormal("Jefferson","Uberlândia");
-		assertNotNull(cliente);
-		daoImpl.inserir(cliente);
+		PessoaDaoImpl daoImpl = (PessoaDaoImpl) DaoFactory.getInstance().createDao("PessoaDao");
+		assertNotNull(daoImpl);	    
+		Pessoa clienteNormal = new ClienteNormal("Pedro","BH");
+		daoImpl.inserir(clienteNormal);
+	
 	}
 	@Test
 	public void editarTest(){

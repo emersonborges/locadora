@@ -6,7 +6,7 @@
 <hibernate-mapping>
     <class name="locadora.model.Pessoa" table="Pessoa" abstract="true">
         <id name="id" type="java.lang.Long">           
-                              
+               <generator class="foreign"></generator>               
         </id>          
         
         
@@ -46,7 +46,19 @@
             <column name="TELEFONE" />
         </property>
         
-        <one-to-one name="desconto" foreign-key="desconto_id" class="locadora.model.desconto.Desconto" constrained="true" cascade="save-update"></one-to-one>
+        <property name="cidade" type="java.lang.String">
+            <column name="CIDADE" />
+        </property>        
+        
+        
+        <!-- <one-to-one name="desconto" foreign-key="desconto_id" class="locadora.model.desconto.Desconto"  constrained="true" cascade="save-update"></one-to-one> -->
+       
+        <component name="desconto" class="locadora.model.desconto.Desconto" >
+        
+        </component>
+       
+
+   
         
        <subclass name="locadora.model.cliente.ClienteNormal" discriminator-value="NORMAL">
        

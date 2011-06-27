@@ -13,6 +13,7 @@
          <discriminator column="Desconto_tipo" type="string"/>
           
         
+       ,<!-- <one-to-one name="pessoa" class="locadora.model.Pessoa"></one-to-one> --> 
         
         <subclass name="locadora.model.desconto.SemDesconto" discriminator-value="SemDesconto">
           <property name="desconto"/>     
@@ -25,6 +26,7 @@
          <subclass name="locadora.model.desconto.DescontoVIP" discriminator-value="DescontoVip">
           <property name="desconto"/>     
         </subclass>     
+             
              
              
     </class>
