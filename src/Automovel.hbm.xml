@@ -21,7 +21,7 @@
 		<property name="preco"></property>
 		<property name="status"></property>				
 	  
-	 <set name="categorias" table="CategoriaAutomovel" inverse="true">
+	  <set name="categorias" table="CategoriaAutomovel" inverse="true">
 			<key column="automovel_id"/>
 			<many-to-many class="locadora.model.automovel.Categoria" column="categoria_id"  />
 	  </set>  
