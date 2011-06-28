@@ -12,10 +12,14 @@ import locadora.model.automovel.*;
  */
 public class TanqueCheio extends Adicional {
 
-    private double capacidade;
+    private int capacidade;
     private double preco;
 
-     public TanqueCheio(Automovel a,double preco,double capacidade){
+    public TanqueCheio(){
+    	super();
+    }
+    
+    public TanqueCheio(Automovel a,double preco,int capacidade){
         this.setAutomovelDecorado(a);
         this.getAutomovelDecorado().addAdicionais(this);
         this.preco = preco;
@@ -31,11 +35,13 @@ public class TanqueCheio extends Adicional {
 
 	
 
-	public double getCapacidade() {
-		return (double) capacidade;
+	
+
+	public int getCapacidade() {
+		return capacidade;
 	}
 
-	public void setCapacidade(double capacidade) {
+	public void setCapacidade(int capacidade) {
 		this.capacidade = capacidade;
 	}
 

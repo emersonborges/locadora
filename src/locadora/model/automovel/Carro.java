@@ -21,6 +21,10 @@ public class Carro extends Automovel {
     private boolean arcondicionado;
     private int nportas;
     
+    public Carro(){
+    	super();
+    }
+    
     public Carro(int ano, double preco){
     	setAno(ano);
     	setPreco(preco);

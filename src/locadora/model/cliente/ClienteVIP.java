@@ -13,9 +13,11 @@ import locadora.model.observer.*;
  * @author Emerson
  */
 public class ClienteVIP extends Cliente{
-
+	
+	private Desconto desconto;
+	
     public ClienteVIP(){
-        this.desconto = new DescontoVIP();
+        this.setDesconto(new DescontoVIP());
     }
 
     @Override
@@ -23,5 +25,19 @@ public class ClienteVIP extends Cliente{
     	System.out.println("Mandando email - cliente VIP");
     	this.setUpdateStatus("VIP");
     }
+
+	/**
+	 * @param desconto the desconto to set
+	 */
+	public void setDesconto(Desconto desconto) {
+		this.desconto = desconto;
+	}
+
+	/**
+	 * @return the desconto
+	 */
+	public Desconto getDesconto() {
+		return desconto;
+	}
 
 }

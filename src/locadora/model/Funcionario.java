@@ -1,16 +1,63 @@
 package locadora.model;
 
-public abstract class Funcionario {
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import locadora.model.observer.Subject;
+
+public class Funcionario{
 	
+	private Long id;
+	private String celular;
+    private String cep;
+    private String cpf;
+    private Date dataNascimento;
+    private String email;
+    private String endereco;
+    private String nome;
+    private String nomeMae;
+    private String nomePai;
+    private String rg;
+    private String telefone;
+    private String cidade;   
 	private String carteiraTrabalho;
-	private String celularString;
-	private String cpf;
-	private String endereco;
-	private String nome;
-	private String nomeMae;
-	private String nomePai;
-	private String rg;
-	private String telefone;
+	
+	
+	
+	
+	private Set<Locacao> locacoes = new HashSet<Locacao>();
+	
+	public Funcionario(){
+		super();
+	}
+	
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	
+
+	public Set<Locacao> getLocacoes() {
+		return locacoes;
+	}
+	public void setLocacoes(Set<Locacao> locacoes) {
+		this.locacoes = locacoes;
+	}
+	public Set<Locacao> getLocacaos() {
+		return locacoes;
+	}
+	public void setLocacaos(Set<Locacao> locacaos) {
+		this.locacoes = locacaos;
+	}
 	/**
 	 * @param carteiraTrabalho the carteiraTrabalho to set
 	 */
@@ -23,101 +70,79 @@ public abstract class Funcionario {
 	public String getCarteiraTrabalho() {
 		return carteiraTrabalho;
 	}
-	/**
-	 * @param celularString the celularString to set
-	 */
-	public void setCelularString(String celularString) {
-		this.celularString = celularString;
+	
+	public String getCelular() {
+		return celular;
 	}
-	/**
-	 * @return the celularString
-	 */
-	public String getCelularString() {
-		return celularString;
+	public void setCelular(String celular) {
+		this.celular = celular;
 	}
-	/**
-	 * @param cpf the cpf to set
-	 */
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public String getCep() {
+		return cep;
 	}
-	/**
-	 * @return the cpf
-	 */
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
 	public String getCpf() {
 		return cpf;
 	}
-	/**
-	 * @param endereco the endereco to set
-	 */
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
-	/**
-	 * @return the endereco
-	 */
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public String getEndereco() {
 		return endereco;
 	}
-	/**
-	 * @param nome the nome to set
-	 */
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
-	/**
-	 * @return the nome
-	 */
 	public String getNome() {
 		return nome;
 	}
-	/**
-	 * @param nomeMae the nomeMae to set
-	 */
-	public void setNomeMae(String nomeMae) {
-		this.nomeMae = nomeMae;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	/**
-	 * @return the nomeMae
-	 */
 	public String getNomeMae() {
 		return nomeMae;
 	}
-	/**
-	 * @param nomePai the nomePai to set
-	 */
-	public void setNomePai(String nomePai) {
-		this.nomePai = nomePai;
+	public void setNomeMae(String nomeMae) {
+		this.nomeMae = nomeMae;
 	}
-	/**
-	 * @return the nomePai
-	 */
 	public String getNomePai() {
 		return nomePai;
 	}
-	/**
-	 * @param rg the rg to set
-	 */
-	public void setRg(String rg) {
-		this.rg = rg;
+	public void setNomePai(String nomePai) {
+		this.nomePai = nomePai;
 	}
-	/**
-	 * @return the rg
-	 */
 	public String getRg() {
 		return rg;
 	}
-	/**
-	 * @param telefone the telefone to set
-	 */
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setRg(String rg) {
+		this.rg = rg;
 	}
-	/**
-	 * @return the telefone
-	 */
 	public String getTelefone() {
 		return telefone;
 	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	
 		
 }

@@ -1,6 +1,5 @@
 package locadora.padroes;
 
-import locadora.model.automovel.Carro;
 import locadora.model.factory.FactoryAutomovel;
 import locadora.model.factory.FactoryChevrolet;
 import locadora.model.factory.FactoryFiat;

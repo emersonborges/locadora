@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+
+	<class name="locadora.model.Devolucao">
+	
+		<id name="id" column="devolucao_id">
+			<generator class="foreign">
+				<param name="property" >funcionario</param>
+			</generator>
+				
+		</id>		
+	
+		
+		<one-to-one name="funcionario" constrained="true" class="locadora.model.Funcionario" foreign-key="pessoa_id" cascade="save-update"></one-to-one>
+		
+	
+		<set name="reservas" table="locacoes">
+			<key column="devolucao_id"/>
+			<many-to-many class="locadora.model.Reserva" column="reserva_id"/>
+		</set>
+	
+	
+	</class>
+</hibernate-mapping>
+
+
+
+  

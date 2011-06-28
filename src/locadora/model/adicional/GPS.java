@@ -16,7 +16,9 @@ public class GPS extends Adicional{
     private double preco;
     private String descricao;
     
-    
+    public GPS(){
+    	super();
+    }
 
     public String getDescricao() {
 		return descricao;

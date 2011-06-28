@@ -20,7 +20,19 @@ public abstract class Pessoa extends Observer{
     private String nomeMae;
     private String nomePai;
     private String rg;
-    private String telefone;    
+    private String telefone;
+    private String cidade;   
+    
+    private Desconto desconto;  // Funcionario Tem um desconto ainda maior   
+    
+    public Pessoa(){
+    	super();
+    }
+    
+    public Pessoa(String nome, String c){
+    	this.nome = nome;
+    	this.cidade = c;
+    }
 
     public String getCelular() {
         return celular;
@@ -116,6 +128,34 @@ public abstract class Pessoa extends Observer{
 
 	public Long getId() {
 		return id;
+	}
+
+	/**
+	 * @param cidade the cidade to set
+	 */
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	/**
+	 * @return the cidade
+	 */
+	public String getCidade() {
+		return cidade;
+	}
+
+	/**
+	 * @param desconto the desconto to set
+	 */
+	public void setDesconto(Desconto desconto) {
+		this.desconto = desconto;
+	}
+
+	/**
+	 * @return the desconto
+	 */
+	public Desconto getDesconto() {
+		return desconto;
 	}
 
 }

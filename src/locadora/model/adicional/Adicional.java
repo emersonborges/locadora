@@ -5,6 +5,9 @@
 
 package locadora.model.adicional;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import locadora.model.automovel.*;
 
 /**
@@ -17,8 +20,20 @@ public abstract class Adicional extends Automovel {
 	private Automovel automovelDecorado;    
     private String decricao;
     
+    private Set automoveis = new HashSet();
     
-    public Long getId() {
+    
+    
+    
+    public Set getAutomoveis() {
+		return automoveis;
+	}
+
+	public void setAutomoveis(Set automoveis) {
+		this.automoveis = automoveis;
+	}
+
+	public Long getId() {
 		return id;
 	}
 
@@ -52,5 +67,14 @@ public abstract class Adicional extends Automovel {
 	public Automovel getAutomovelDecorado() {
 		return automovelDecorado;
 	}
+
+	@Override
+	public String toString() {
+		return "Adicional [id=" + id + ", decricao=" + decricao + "]";
+	}
+	
+	
+	
+	
 
 }

@@ -27,6 +27,9 @@ public class Moto extends Automovel{
         this.cilindradas = cilindradas;
     }
 
+    public Moto(){
+    	super();
+    }
 
 
 }
