@@ -4,15 +4,14 @@
 <!-- Generated 17/06/2011 15:05:25 by Hibernate Tools 3.4.0.CR1 -->
 
 <hibernate-mapping>
-
     <class name="locadora.model.Pessoa" table="Pessoa" abstract="true">
-        
-        <id name="id" column="pessoa_id" type="java.lang.Long">           
-               <generator class="native"></generator>               
+        <id name="id" type="java.lang.Long">           
+               <generator class="foreign"></generator>               
         </id>          
         
-        <discriminator column="Desconto_Type" type="string"/>
-           
+        
+        <discriminator column="TIPO" type="string"></discriminator>      
+         
         <property name="celular" type="java.lang.String">
             <column name="CELULAR" />
         </property>
@@ -51,9 +50,26 @@
             <column name="CIDADE" />
         </property>        
         
-    	     
+        
+        <!-- <one-to-one name="desconto" foreign-key="desconto_id" class="locadora.model.desconto.Desconto"  constrained="true" cascade="save-update"></one-to-one> -->
        
+        <!-- <component name="desconto" class="locadora.model.desconto.Desconto" />  -->        
+        
        
+
+   
+        
+       <subclass name="locadora.model.cliente.ClienteNormal" discriminator-value="NORMAL">
+       		 <property name="desconto" column="desconto_id"/>
+       </subclass>    
+       
+       <subclass name="locadora.model.cliente.ClienteVIP" discriminator-value="VIP">
+            <property name="desconto" column="desconto_id"/>
+       </subclass>    
+       
+       <subclass name="locadora.model.cliente.ClienteGOLD" discriminator-value="GOLD">
+            <property name="desconto" column="desconto_id"/>
+       </subclass>    
         
         
        
@@ -61,4 +77,3 @@
     </class>
     
 </hibernate-mapping>
-

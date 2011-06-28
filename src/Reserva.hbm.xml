@@ -17,7 +17,7 @@
 		
 	
 	
-	    <one-to-one name="cliente" class="locadora.model.Pessoa" constrained="true" cascade="save-update"/>	    
+	    <one-to-one name="cliente" class="locadora.model.cliente.Cliente" constrained="true" cascade="save-update"/>	    
 	
 	    
 	    <one-to-one name="Automovel" class="locadora.model.automovel.Automovel" constrained="true" cascade="save-update">

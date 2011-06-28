@@ -15,7 +15,7 @@ import locadora.model.observer.*;
  *
  * @author Emerson
  */
-public class ClienteNormal extends Pessoa{	
+public class ClienteNormal extends Cliente{	
 	
 	private Desconto desconto;
 	

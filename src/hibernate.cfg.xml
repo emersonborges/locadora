@@ -30,14 +30,18 @@
 		<mapping resource="TanqueCheio.hbm.xml" />
 		<mapping resource="Caminhao.hbm.xml" />
 		<mapping resource="Moto.hbm.xml" />
-		<mapping resource="Pessoa.hbm.xml" />		
+				
 		<mapping resource="Desconto.hbm.xml" />		
-		<mapping resource="Reserva.hbm.xml" />
+		<mapping resource="Reserva.hbm.xml" />	
+
 		
-		<mapping resource="Locacao.hbm.xml" />
+		<mapping resource="Cliente.hbm.xml" />
+		<mapping resource="ClienteNormal.hbm.xml" />
+		
+		<!--<mapping resource="Locacao.hbm.xml" />
 		<mapping resource="Devolucao.hbm.xml" />
 		<mapping resource="Funcionario.hbm.xml" />
 		
 		
-	</session-factory>
+	--></session-factory>
 </hibernate-configuration>

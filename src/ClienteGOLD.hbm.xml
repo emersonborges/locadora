@@ -6,7 +6,7 @@
 <hibernate-mapping>
 
  
-    <subclass name="locadora.model.cliente.ClienteVIP" extends="locadora.model.cliente.Cliente" discriminator-value="VIP">    	 
+    <subclass name="locadora.model.cliente.ClienteGOLD" extends="locadora.model.cliente.Cliente" discriminator-value="GOLD">    	 
         
         <join table="Cliente_Desconto" optional="true">
         		<key column="cliente_id" unique="true"></key>
