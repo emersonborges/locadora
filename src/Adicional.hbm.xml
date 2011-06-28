@@ -13,9 +13,7 @@
 		
 		<property name="decricao"></property>
 		
-		<!-- <one-to-one name="automovelDecorado" class="locadora.model.automovel.Automovel" cascade="none">		
-		</one-to-one> -->	
-			
+				
 		 <set name="automoveis" table="AdicionaisAutomovel">
 			<key column="adicional_id"/>
 			<many-to-many class="locadora.model.adicional.Adicional" column="automovel_id"/>

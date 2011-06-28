@@ -3,7 +3,7 @@ package locadora.persistence.hibernate.factory;
 import locadora.persistence.hibernate.AdicionalDaoImpl;
 import locadora.persistence.hibernate.AutomovelDaoImpl;
 import locadora.persistence.hibernate.CategoriaDaoImpl;
-import locadora.persistence.hibernate.PessoaDaoImpl;
+import locadora.persistence.hibernate.ClienteDaoImpl;
 import locadora.persistence.hibernate.DevolucaoDaoImpl;
 import locadora.persistence.hibernate.FuncionarioDaoImpl;
 import locadora.persistence.hibernate.LocacaoDaoImpl;
@@ -20,7 +20,7 @@ public class DaoFactory {
 	public Object createDao(String dao){
 		Object daoObject = null;
 		if(dao.equals("PessoaDao")){
-			daoObject = new PessoaDaoImpl();
+			daoObject = new ClienteDaoImpl();
 		}else if(dao.equals("AdicionalDao")){
 			daoObject = new AdicionalDaoImpl();
 		}else if(dao.equals("ReservaDao")){

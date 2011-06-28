@@ -11,7 +11,7 @@ import locadora.model.cliente.Cliente;
 import locadora.model.cliente.ClienteNormal;
 import locadora.model.desconto.SemDesconto;
 import locadora.persistence.hibernate.MyHibernateSingleton;
-import locadora.persistence.hibernate.PessoaDaoImpl;
+import locadora.persistence.hibernate.ClienteDaoImpl;
 import locadora.persistence.hibernate.factory.DaoFactory;
 
 import static org.junit.Assert.*;

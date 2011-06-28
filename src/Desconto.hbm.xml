@@ -14,15 +14,15 @@
          <discriminator column="Desconto_tipo" type="string"/>          
                
         
-        <subclass name="locadora.model.desconto.SemDesconto" discriminator-value="SemDesconto">
+        <subclass name="locadora.model.desconto.SemDesconto" discriminator-value="NORMAL">
           <property name="desconto"/>     
         </subclass>
         
-        <subclass name="locadora.model.desconto.DescontoGOLD" discriminator-value="DescontoGold">
+        <subclass name="locadora.model.desconto.DescontoGOLD" discriminator-value="GOLD">
           <property name="desconto"/>     
         </subclass>
              
-         <subclass name="locadora.model.desconto.DescontoVIP" discriminator-value="DescontoVip">
+         <subclass name="locadora.model.desconto.DescontoVIP" discriminator-value="VIP">
           <property name="desconto"/>     
         </subclass>             
              

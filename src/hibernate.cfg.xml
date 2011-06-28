@@ -37,11 +37,14 @@
 		
 		<mapping resource="Cliente.hbm.xml" />
 		<mapping resource="ClienteNormal.hbm.xml" />
-		
-		<!--<mapping resource="Locacao.hbm.xml" />
-		<mapping resource="Devolucao.hbm.xml" />
+		<mapping resource="ClienteVIP.hbm.xml" />
+		<mapping resource="ClienteGOLD.hbm.xml" />
 		<mapping resource="Funcionario.hbm.xml" />
 		
+		<mapping resource="Locacao.hbm.xml" />
+		<mapping resource="Devolucao.hbm.xml" />
 		
-	--></session-factory>
+		
+		
+	</session-factory>
 </hibernate-configuration>
