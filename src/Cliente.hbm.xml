@@ -11,7 +11,7 @@
                <generator class="native"></generator>               
         </id>          
         
-        <discriminator column="Desconto_Type" type="string"/>
+        <discriminator column="Cliente_Type" type="string"/>
            
         <property name="celular" type="java.lang.String">
             <column name="CELULAR" />
