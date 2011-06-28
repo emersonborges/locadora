@@ -6,7 +6,7 @@ import locadora.model.Devolucao;
 
 public interface DevolucaoDao {
 	
-	void inserir (Devolucao devolucao);
+	void inserir (Devolucao devolucao) throws Exception;
 	void editar (Devolucao devolucao);
 	List<Devolucao> listar();
 	void remover(Devolucao devolucao);

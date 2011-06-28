@@ -5,8 +5,7 @@
 
 <hibernate-mapping>
 
-	<class name="locadora.model.Devolucao">
-	
+	<class name="locadora.model.Devolucao">	
 	
 		<id name="id" column="automovel_id">
 			<generator class="foreign">

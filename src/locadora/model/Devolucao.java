@@ -17,6 +17,7 @@ public class Devolucao {
 	public Devolucao(Reserva r, Funcionario f){
 	
 		this.funcionario = f;
+		this.reserva = r;
 	}
 	
 	public Devolucao(){
@@ -66,6 +67,7 @@ public class Devolucao {
 		this.reserva = reserva;
 	}
 
+	
 	/**
 	 * @param reservas the reservas to set
 	 */

@@ -4,6 +4,7 @@ import locadora.persistence.hibernate.AdicionalDaoImpl;
 import locadora.persistence.hibernate.AutomovelDaoImpl;
 import locadora.persistence.hibernate.CategoriaDaoImpl;
 import locadora.persistence.hibernate.ClienteDaoImpl;
+import locadora.persistence.hibernate.DescontoDaoImpl;
 import locadora.persistence.hibernate.DevolucaoDaoImpl;
 import locadora.persistence.hibernate.FuncionarioDaoImpl;
 import locadora.persistence.hibernate.LocacaoDaoImpl;
@@ -35,6 +36,8 @@ public class DaoFactory {
 			daoObject = new DevolucaoDaoImpl();
 		}else if(dao.equals("CategoriaDao")){
 			daoObject = new CategoriaDaoImpl();
+		}else if(dao.equals("DescontoDao")){
+			daoObject = new DescontoDaoImpl();
 		}
 		return daoObject;
 	}

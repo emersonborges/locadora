@@ -56,7 +56,7 @@
 	  
 	   <set name="devolucoes" inverse="true">
 			<key column="funcionario_id"/>
-			<one-to-many  class="locadora.model.Devolucao"/>
+			<one-to-many  class="locadora.model.Devolucao" />
 	  </set>  
 	  
            

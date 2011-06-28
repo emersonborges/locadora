@@ -2,14 +2,29 @@ package locadora.persistence.hibernate;
 
 import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import locadora.model.Devolucao;
 
 public class DevolucaoDaoImpl implements DevolucaoDao{
 
 	@Override
-	public void inserir(Devolucao devolucao) {
-		// TODO Auto-generated method stub
-		
+	public void inserir(Devolucao devolucao) throws Exception {
+		Session session = MyHibernateSingleton.getInstance().openSession();
+		Transaction transaction = null;
+		try {
+			transaction = session.beginTransaction();			
+			session.save(devolucao);
+			transaction.commit();			
+		} catch (Exception e) {
+			/*if(transaction!=null){
+				transaction.rollback();
+			}*/
+			throw e;
+		}finally{
+			session.close();
+		}		
 	}
 
 	@Override
