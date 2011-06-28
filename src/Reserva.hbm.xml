@@ -6,34 +6,29 @@
 <hibernate-mapping>	
 		
 	<class name="locadora.model.Reserva">
-		<id name="id" column="reserva_id" type="java.lang.Long">
-			<generator class="native"></generator>
+		
+		<id column="automovel_id" name="id" type="java.lang.Long">
+			<generator class="foreign">			
+			<param name="property">automovel</param>			
+			</generator>
 		</id>	
 		
+				
 		<property name="dataDevolucao"/>	
 		<property name="dataRetirada"/>
 		<property name="multa"/>	
-		<property name="valor"/>  
-		
-	 	 <join table="Reserva_Cliente" optional="true">
-        		<key column="reserva_id" unique="true"></key>     
-        		<many-to-one name="desconto" column="desconto_id" not-null="true" unique="true"></many-to-one>
-        </join>
+		<property name="valor"/>  		
 	   
-	     <set name="automoveis" table="reservaAutomoveis">
-		        <key column="reserva_id"/>		
-		         <ma column="automovel_id" class="locadora.model.automovel.Automovel"/>
-         	     
-         </set>	
-         
-           <set name="automoveis" table="reservaAutomoveis" inverse="true">
-			<key column="automovel_id"/>
-			<many-to-many class="locadora.model.automovel.Automovel" column="automovel_id" />
-	  </set> 	
-	
-	 	    
+        
+        <many-to-one name="cliente" class="locadora.model.cliente.Cliente" column="cliente_id"/>
+        <one-to-one name="devolucao" class="locadora.model.Devolucao" cascade="save-update"></one-to-one>
+	    <one-to-one name="locacao" class="locadora.model.Locacao" cascade="save-update"></one-to-one>
+	    
+	    <one-to-one name="automovel" class="locadora.model.automovel.Automovel" constrained="true"></one-to-one>
 				
 		
 	</class>
 
 </hibernate-mapping>
+
+

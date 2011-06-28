@@ -5,7 +5,7 @@
 <hibernate-mapping>
     
     <class name="locadora.model.Funcionario">     
-       <id name="id" type="java.lang.Long">           
+       <id name="id" column="funcionario_id" type="java.lang.Long">           
                <generator class="increment"></generator>               
         </id>       
        <property name="celular" type="java.lang.String">
@@ -49,10 +49,16 @@
     
         <property name="carteiraTrabalho" type="java.lang.String"/>    
          
-      <set name="locacoes" table="Locacoes" inverse="true">
+      <set name="locacoes" inverse="true">
 			<key column="funcionario_id"/>
-			<many-to-many class="locadora.model.Locacao" column="locacao_id" />
+			<one-to-many  class="locadora.model.Locacao"/>
 	  </set>  
+	  
+	   <set name="devolucoes" inverse="true">
+			<key column="funcionario_id"/>
+			<one-to-many  class="locadora.model.Devolucao"/>
+	  </set>  
+	  
            
     </class>
     

@@ -57,7 +57,11 @@
     	<property name="clienteDesde" type="java.lang.String">
         </property>
        
-          
+         
+       	  <set name="reservas" inverse="true" >
+	  		<key column="automovel_id"></key>
+	  		<one-to-many class="locadora.model.Reserva"/>
+	     </set> 
         
        
         

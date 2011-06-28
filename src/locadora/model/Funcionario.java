@@ -24,9 +24,8 @@ public class Funcionario{
 	private String carteiraTrabalho;
 	
 	
-	
-	
 	private Set<Locacao> locacoes = new HashSet<Locacao>();
+	private Set<Locacao> devolucoes = new HashSet<Locacao>();
 	
 	public Funcionario(){
 		super();
@@ -142,6 +141,18 @@ public class Funcionario{
 	}
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
+	}
+
+
+
+	public Set<Locacao> getDevolucoes() {
+		return devolucoes;
+	}
+
+
+
+	public void setDevolucoes(Set<Locacao> devolucoes) {
+		this.devolucoes = devolucoes;
 	}
 	
 		

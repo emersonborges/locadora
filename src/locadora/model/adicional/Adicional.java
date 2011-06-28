@@ -20,20 +20,8 @@ public abstract class Adicional extends Automovel {
 	private Automovel automovelDecorado;    
     private String decricao;
     
-    private Set automoveis = new HashSet();
     
-    
-    
-    
-    public Set getAutomoveis() {
-		return automoveis;
-	}
-
-	public void setAutomoveis(Set automoveis) {
-		this.automoveis = automoveis;
-	}
-
-	public Long getId() {
+  	public Long getId() {
 		return id;
 	}
 

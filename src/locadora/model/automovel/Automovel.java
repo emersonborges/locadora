@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import locadora.model.Reserva;
 import locadora.model.observer.*;
 
 /*
@@ -18,10 +19,11 @@ import locadora.model.observer.*;
  */
 public abstract class Automovel extends Subject{
 
-  /* List<Automovel> adicionais = new ArrayList<Automovel>();
-   List<Categoria> categorias = new ArrayList<Categoria>();*/
+	
     private Set adicionais = new HashSet();
 	private Set categorias = new HashSet();
+	
+	
 	
     private Long id;
     private int ano;
@@ -36,10 +38,10 @@ public abstract class Automovel extends Subject{
     private double preco;
     private String status;
     
-   
+/*    private Reserva reserva;*/
     
-    
-  
+
+
 	public Set getAdicionais() {
 		return adicionais;
 	}

@@ -7,24 +7,18 @@
 
 	<class name="locadora.model.Locacao">
 	
-		<id name="id" column="locacao_id">
+		<id name="id" column="automovel_id">
 			<generator class="foreign">
-				<param name="property" >funcionario</param>
-			</generator>
-				
+				<param name="property">reserva</param>
+			</generator>			
 		</id>
 		
 	
+		<many-to-one name="funcionario" class="locadora.model.Funcionario" column="funcionario_id"></many-to-one>
+	
+	    <one-to-one name="reserva" class="locadora.model.Reserva" constrained="true"> </one-to-one>
+	     
 		
-		<one-to-one name="funcionario" constrained="true" class="locadora.model.Funcionario" foreign-key="pessoa_id" cascade="save-update"></one-to-one>
-		
-	
-		<set name="reservas" table="locacoes">
-			<key column="locacao_id"/>
-			<many-to-many class="locadora.model.Reserva" column="reserva_id"/>
-		</set>
-	
-	
 	</class>
 </hibernate-mapping>
 

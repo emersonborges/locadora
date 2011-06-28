@@ -18,13 +18,13 @@ public class TestReservaDaoImpl {
 	@Test
 	public void inserirTest() throws Exception{
 		ReservaDao reservaDao =  (ReservaDao) DaoFactory.getInstance().createDao("ReservaDao");
-		assertNotNull(reservaDao);
-		ClienteNormal clienteGold = new ClienteNormal("Jefferson","Uberlandia");
-		assertNotNull(clienteGold);
-		Automovel gol = new Carro(2011,25000);
-		assertNotNull(gol);
-		Reserva reserva = new Reserva(clienteGold,gol,500);	
-		assertNotNull(reserva);
+		assertNotNull(reservaDao);		
+		Cliente cliente = new ClienteNormal();
+		cliente.setId((long) 1);
+		Automovel automovel = new Carro();
+		automovel.setId((long) 1);
+		
+		Reserva reserva = new Reserva(cliente, automovel, 200);
 		reservaDao.inserir(reserva);
 	}
 	@Test

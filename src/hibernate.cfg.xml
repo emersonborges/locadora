@@ -32,7 +32,7 @@
 		<mapping resource="Moto.hbm.xml" />
 				
 		<mapping resource="Desconto.hbm.xml" />		
-		<mapping resource="Reserva.hbm.xml" />	
+		
 
 		
 		<mapping resource="Cliente.hbm.xml" />
@@ -43,6 +43,7 @@
 		
 		<mapping resource="Locacao.hbm.xml" />
 		<mapping resource="Devolucao.hbm.xml" />
+		<mapping resource="Reserva.hbm.xml" />	
 		
 		
 		

@@ -17,6 +17,8 @@ public class Reserva {
 	
 	private Cliente cliente;
 	private Automovel automovel;
+	private Devolucao devolucao;
+	private Locacao locacao;
 	
 	public Reserva(){
 		super();
@@ -38,6 +40,15 @@ public class Reserva {
 		
 	}
 	
+	
+	public Devolucao getDevolucao() {
+		return devolucao;
+	}
+
+	public void setDevolucao(Devolucao devolucao) {
+		this.devolucao = devolucao;
+	}
+
 	public Date getDataDevolucao() {
 		return dataDevolucao;
 	}
@@ -94,6 +105,14 @@ public class Reserva {
 
 	public void setAutomovel(Automovel automovel) {
 		this.automovel = automovel;
+	}
+
+	public Locacao getLocacao() {
+		return locacao;
+	}
+
+	public void setLocacao(Locacao locacao) {
+		this.locacao = locacao;
 	}
 	
 	

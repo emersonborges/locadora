@@ -19,7 +19,7 @@ public class DaoFactory {
 	
 	public Object createDao(String dao){
 		Object daoObject = null;
-		if(dao.equals("PessoaDao")){
+		if(dao.equals("ClienteDao")){
 			daoObject = new ClienteDaoImpl();
 		}else if(dao.equals("AdicionalDao")){
 			daoObject = new AdicionalDaoImpl();
