@@ -1,0 +1,5 @@
+insert into Reserva values(1,'2011-06-29','2011-01-26',0,200,1);
+insert into Reserva values(2,'2011-06-29','2011-01-26',0,200,2);
+insert into Reserva values(3,'2011-05-26','2011-05-28',0,250,2);
+insert into Reserva values(4,'2011-02-13','2011-02-17',0,230,3);
+insert into Reserva values(5,'2011-04-09','2011-04-12',0,260,4);

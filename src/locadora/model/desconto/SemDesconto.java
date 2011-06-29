@@ -34,7 +34,10 @@ public class SemDesconto extends Desconto{
 		this.desconto = desconto;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "DescontoGOLD [id  "+getId()+" desconto=" + desconto + "]";
+	}
 	
 
 }

@@ -27,4 +27,6 @@ public abstract class Desconto {
 	public Long getId() {
 		return id;
 	}
+	
+	
 }

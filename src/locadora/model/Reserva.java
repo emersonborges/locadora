@@ -25,9 +25,9 @@ public class Reserva {
 	}
 	
 	public Reserva(Cliente c, Automovel a, double valor){
-		this.cliente = c;
-		this.automovel = a;
-		this.valor = valor;
+		setAutomovel(a);
+		setCliente(c);
+		setValor(valor);
 	}
 	
 	public Reserva(Cliente c, Automovel a, Date dateDevolucao, Date dateRetirada, double multa, double valor){
@@ -114,6 +114,14 @@ public class Reserva {
 	public void setLocacao(Locacao locacao) {
 		this.locacao = locacao;
 	}
+
+	@Override
+	public String toString() {
+		return "Reserva [id=" + id + ", dataDevolucao=" + dataDevolucao
+				+ ", dataRetirada=" + dataRetirada + ", multa=" + multa
+				+ ", valor=" + valor + "]";
+	}
+	
 	
 	
 }
