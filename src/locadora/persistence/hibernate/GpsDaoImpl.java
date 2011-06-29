@@ -5,17 +5,17 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import locadora.model.automovel.Categoria;
+import locadora.model.adicional.GPS;
 
-public class CategoriaDaoImpl implements CategoriaDao {
+public class GpsDaoImpl implements GpsDao {
 
 	@Override
-	public void inserir(Categoria categoria) throws Exception {
+	public void inserir(GPS gps) throws Exception {
 		Session session = MyHibernateSingleton.getInstance().openSession();
 		Transaction transaction = null;
 		try {
 			transaction = session.beginTransaction();
-			session.save(categoria);
+			session.save(gps);
 			transaction.commit();
 		} catch (Exception e) {
 			if (transaction != null) {
@@ -29,19 +29,19 @@ public class CategoriaDaoImpl implements CategoriaDao {
 	}
 
 	@Override
-	public void editar(Categoria categoria) {
+	public void editar(GPS gps) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<Categoria> listar() {
+	public List<GPS> listar() throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void remover(Categoria categoria) {
+	public void remover(GPS gps) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}

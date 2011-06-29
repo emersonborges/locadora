@@ -8,6 +8,7 @@ import locadora.model.automovel.Automovel;
 import locadora.model.automovel.Carro;
 import locadora.persistence.hibernate.AdicionalDaoImpl;
 import locadora.persistence.hibernate.MyHibernateSingleton;
+import locadora.persistence.hibernate.factory.DaoFactory;
 
 import org.hibernate.Transaction;
 import org.hibernate.classic.Session;
@@ -32,23 +33,23 @@ public class TestAdicionalDaoImpl {
 	}*/
 	
 	@Test
-	public void testInserir(){
-		Session session = MyHibernateSingleton.getInstance().openSession();
-		Transaction transaction = session.beginTransaction();
+	public void testInserir() throws Exception{
 		
-        Automovel carro = new Carro(2011,20000);      
+		Automovel carro = new Carro(2011,20000);   
+		carro.setId((long) 1);
         carro.setChassi("Chassi");
         carro.setCor("Branco");
         carro.estaDisponivel();
         carro.setStatus("disponivel"); 
         carro.setPlaca("placa A");
+        
         Adicional adicional = new GPS(carro, 1023);
         adicional.setDecricao("GPS");
         
-		AdicionalDaoImpl adicionalHibernate = new AdicionalDaoImpl();
-		adicionalHibernate.inserir(adicional);
-		transaction.commit();
-		session.close();
+        
+		AdicionalDaoImpl adicionalDaoImpl = (AdicionalDaoImpl) DaoFactory.getInstance().createDao("AdicionalDao");
+		adicionalDaoImpl.inserir(adicional);
+		
 		
 	}
 	@Test

@@ -6,9 +6,9 @@ import locadora.model.adicional.Adicional;
 
 public interface AdicionalDao {
 	
-	void inserir (Adicional adicional);
-	void editar (Adicional adicional);
-	List<Adicional> listar();
-	void remover(Adicional adicional);
+	void inserir (Adicional adicional) throws Exception;
+	void editar (Adicional adicional)throws Exception;
+	List<Adicional> listar()throws Exception;
+	void remover(Adicional adicional)throws Exception;
 	
 }

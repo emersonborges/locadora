@@ -5,17 +5,17 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import locadora.model.automovel.Categoria;
+import locadora.model.adicional.AssentoInfantil;
 
-public class CategoriaDaoImpl implements CategoriaDao {
+public class AssentoInfantilDaoImpl implements AssentoInfantilDao{
 
 	@Override
-	public void inserir(Categoria categoria) throws Exception {
+	public void inserir(AssentoInfantil assentoInfantil) throws Exception {
 		Session session = MyHibernateSingleton.getInstance().openSession();
 		Transaction transaction = null;
 		try {
 			transaction = session.beginTransaction();
-			session.save(categoria);
+			session.save(assentoInfantil);
 			transaction.commit();
 		} catch (Exception e) {
 			if (transaction != null) {
@@ -24,24 +24,23 @@ public class CategoriaDaoImpl implements CategoriaDao {
 			throw e;
 		} finally {
 			session.close();
-		}
-		
+		}		
 	}
 
 	@Override
-	public void editar(Categoria categoria) {
+	public void editar(AssentoInfantil assentoInfantil) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public List<Categoria> listar() {
+	public List<AssentoInfantil> listar() throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void remover(Categoria categoria) {
+	public void remover(AssentoInfantil assentoInfantil) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}

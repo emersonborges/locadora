@@ -12,12 +12,24 @@ import locadora.model.adicional.Adicional;
 public class AdicionalDaoImpl implements AdicionalDao {
 
 	@Override
-	public void inserir(Adicional adicional) {
+	public void inserir(Adicional adicional) throws Exception {
+	
 		Session session = MyHibernateSingleton.getInstance().openSession();
-		Transaction transaction = session.beginTransaction();		
-		session.save(adicional);		
-		transaction.commit();
-		session.close();
+		Transaction transaction = null;
+		try {
+			transaction = session.beginTransaction();
+			session.save(adicional);		
+			transaction.commit();
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			throw e;
+		} finally {
+			session.close();
+		}
+		
+		
 	}
 
 	@Override
