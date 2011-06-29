@@ -34,7 +34,15 @@ public class Carro extends Automovel {
     	setNportas(4);
     }
 
-    public boolean isAirbag() {
+    public Carro(int ano, String cor, String comb, int preco, String status){
+    	setAno(ano);
+    	setCor(cor);
+    	setCombustivel(comb);
+    	setPreco(preco);
+    	setStatus(status);
+    }
+
+	public boolean isAirbag() {
 		return airbag;
 	}
 

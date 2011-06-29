@@ -22,7 +22,6 @@ public class ClienteNormal extends Cliente{
 	public ClienteNormal(String n, String c){
 		setNome(n);
 		setCidade(c);
-		this.desconto = new SemDesconto();
 	}
 	
     public ClienteNormal(){

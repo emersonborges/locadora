@@ -31,7 +31,7 @@ public class CarrosTestVolksWagem {
 		assertEquals(2009, gol.getAno());
 		assertEquals(20000, gol.getPreco(), 0);				
 		assertEquals("disponivel", gol.getStatus());
-		gol.setStatus(Status.manutencao);
+		gol.setStatus("manutencao");
 		assertEquals("manutencao", gol.getStatus());
 	}
 	
@@ -42,7 +42,7 @@ public class CarrosTestVolksWagem {
 		assertEquals(2006, Jetta.getAno());
 		assertEquals(13000, Jetta.getPreco(), 0);				
 		assertEquals("disponivel", Jetta.getStatus());
-		Jetta.setStatus(Status.alugado);
+		Jetta.setStatus("alugado");
 		assertEquals("alugado", Jetta.getStatus());
 	}
 	
@@ -53,7 +53,7 @@ public class CarrosTestVolksWagem {
 		assertEquals(2011, Polo.getAno());
 		assertEquals(20000, Polo.getPreco(), 0);				
 		assertEquals("disponivel", Polo.getStatus());
-		Polo.setStatus(Status.manutencao);
+		Polo.setStatus("manutencao");
 		assertEquals("manutencao", Polo.getStatus());
 		assertEquals("gasolina", Polo.getCombustivel().toString());
 	}
@@ -65,7 +65,7 @@ public class CarrosTestVolksWagem {
 		assertEquals(2009, passat.getAno());
 		assertEquals(18000, passat.getPreco(), 0);				
 		assertEquals("alugado", passat.getStatus());
-		passat.setStatus(Status.disponivel);
+		passat.setStatus("disponivel");
 		assertEquals("disponivel", passat.getStatus());
 	}
 	
@@ -77,7 +77,7 @@ public class CarrosTestVolksWagem {
 		assertEquals(2011, golf.getAno());
 		assertEquals(30000, golf.getPreco(), 0);				
 		assertEquals("alugado", golf.getStatus());
-		golf.setStatus(Status.disponivel);
+		golf.setStatus("disponivel");
 		assertEquals("disponivel", golf.getStatus());
 	}
 	

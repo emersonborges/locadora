@@ -14,6 +14,7 @@ import locadora.persistence.hibernate.LocacaoDaoImpl;
 import locadora.persistence.hibernate.MotoDaoImpl;
 import locadora.persistence.hibernate.ReservaDaoImpl;
 import locadora.persistence.hibernate.SeguroDaoImpl;
+import locadora.persistence.hibernate.TanqueCheioDaoImpl;
 
 public class DaoFactory {
 	
@@ -53,6 +54,8 @@ public class DaoFactory {
 			daoObject = new SeguroDaoImpl();
 		}else if(dao.equals("AssentoDao")){
 			daoObject = new AssentoInfantilDaoImpl();
+		}else if(dao.equals("TanqueCheioDao")){
+			daoObject = new TanqueCheioDaoImpl();
 		}
 		return daoObject;
 	}

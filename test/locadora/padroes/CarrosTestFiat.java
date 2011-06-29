@@ -31,7 +31,7 @@ public class CarrosTestFiat {
 		assertEquals(2000, palio.getAno());
 		assertEquals(10000, palio.getPreco(), 0);				
 		assertEquals("alugado", palio.getStatus());
-		palio.setStatus(Status.manutencao);
+		palio.setStatus("manutencao");
 		assertEquals("manutencao", palio.getStatus());
 	}
 	
@@ -42,7 +42,7 @@ public class CarrosTestFiat {
 		assertEquals(2009, punto.getAno());
 		assertEquals(40000, punto.getPreco(), 0);				
 		assertEquals("alugado", punto.getStatus());
-		punto.setStatus(Status.disponivel);
+		punto.setStatus("disponivel");
 		assertEquals("disponivel", punto.getStatus());
 		assertEquals("Amarelo", punto.getCor());
 	}
@@ -54,19 +54,19 @@ public class CarrosTestFiat {
 		assertEquals(2006, siena.getAno());
 		assertEquals(20000, siena.getPreco(), 0);				
 		assertEquals("disponivel", siena.getStatus());
-		siena.setStatus(Status.manutencao);
+		siena.setStatus("manutencao");
 		assertEquals("manutencao", siena.getStatus());
 		assertEquals("gasolina", siena.getCombustivel().toString());
 	}
 	
 	@Test
-	public void testStrada(){
-		Carro strada = (Carro) factoryFiat.createAutomovel("Strada");
+	public void testCarroStrada(){
+		Carro strada = (Carro) FactoryFiat.getInstance().createAutomovel("Strada");
 		assertNotNull(strada);
 		assertEquals(2007, strada.getAno());
 		assertEquals(15000, strada.getPreco(), 0);				
 		assertEquals("disponivel", strada.getStatus());
-		strada.setStatus(Status.manutencao);
+		strada.setStatus("manutencao");
 		assertEquals("manutencao", strada.getStatus());
 	}
 	
@@ -78,7 +78,7 @@ public class CarrosTestFiat {
 		assertEquals(2011, uno.getAno());
 		assertEquals(15000, uno.getPreco(), 0);				
 		assertEquals("alugado", uno.getStatus());
-		uno.setStatus(Status.disponivel);
+		uno.setStatus("disponivel");
 		assertEquals("disponivel", uno.getStatus());
 	}
 }

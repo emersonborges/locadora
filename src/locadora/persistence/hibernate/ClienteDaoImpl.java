@@ -28,21 +28,60 @@ public class ClienteDaoImpl implements ClienteDao{
 
 	@Override
 	public void editar(Cliente c) throws Exception {
-		// TODO Auto-generated method stub
-		
+		Session session = MyHibernateSingleton.getInstance().openSession();
+		Transaction transaction = null;
+		try {
+			transaction = session.beginTransaction();
+			session.update(c);
+			transaction.commit();
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			throw e;
+		} finally {
+			session.close();
+		}		
 	}
 
 	
 	@Override
 	public void remover(Cliente c) throws Exception {
-		// TODO Auto-generated method stub
+		Session session = MyHibernateSingleton.getInstance().openSession();
+		Transaction transaction = null;
+		try {
+			transaction = session.beginTransaction();
+			session.delete(c);
+			transaction.commit();
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			throw e;
+		} finally {
+			session.close();
+		}
 		
 	}
 
 	@Override
-	public List<Cliente> Cliente() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+	public List<locadora.model.cliente.Cliente> listar() throws Exception {
+		Session session = MyHibernateSingleton.getInstance().openSession();
+		Transaction transaction = null;
+		List<Cliente> clientes = null;
+		try {
+			transaction = session.beginTransaction();
+			clientes = session.createQuery("from Cliente").list();
+			transaction.commit();
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			throw e;
+		} finally {
+			session.close();
+		}
+		return clientes;
 	}
 
 	

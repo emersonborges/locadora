@@ -185,6 +185,19 @@ public abstract class Cliente extends Observer{
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
+
+	@Override
+	public String toString() {
+		return "Cliente [id=" + id + ", celular=" + celular + ", cep=" + cep
+				+ ", cpf=" + cpf + ", dataNascimento=" + dataNascimento
+				+ ", email=" + email + ", endereco=" + endereco + ", nome="
+				+ nome + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", rg=" + rg + ", telefone=" + telefone + ", cidade="
+				+ cidade + ", updateStatus=" + updateStatus + ", clienteDesde="
+				+ clienteDesde + "]";
+	}
+
+	
 	
 	
 	

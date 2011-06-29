@@ -1,0 +1,3 @@
+insert into Cliente values (null,'NORMAL','92088867','38408064','12345678910','1995-01-29','magno@gmail.com','Magno','Joao', 'Maria','38456278','32195692','UDI',null,null);
+
+

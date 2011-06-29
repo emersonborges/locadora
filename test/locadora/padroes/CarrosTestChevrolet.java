@@ -78,8 +78,8 @@ public class CarrosTestChevrolet {
 		Carro zafira = (Carro) factoryChevrolet.createAutomovel("Zafira");
 		assertNotNull(zafira);
 		assertEquals(2008, zafira.getAno());
-		assertEquals(22000, zafira.getPreco(), 0);				
-		assertEquals("manutencao", zafira.getStatus());
+		assertEquals(15000, zafira.getPreco(), 0);				
+		assertEquals("alugado", zafira.getStatus());
 		zafira.setStatus("disponivel");
 		assertEquals("disponivel", zafira.getStatus());
 	}

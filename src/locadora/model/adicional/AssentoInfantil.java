@@ -14,39 +14,36 @@ import locadora.model.automovel.*;
 public class AssentoInfantil extends Adicional{
 
      private double preco;
-     private Enum<Tamanho> tamanho;
+     private Character tamanho;
 
 
      public enum Tamanho{
          P,M,G;
      }
 
-     public void setTamanho(char tamanho){
-
-        if(tamanho=='p')
-            this.tamanho=Tamanho.P;
-        else if (tamanho=='m')
-            this.tamanho=Tamanho.M;
-        else if (tamanho=='g')
-            this.tamanho=Tamanho.G;
-    }
-
     public AssentoInfantil(Automovel a,double preco,char tamanho){
         this.setAutomovelDecorado(a);
         this.getAutomovelDecorado().addAdicionais(this);
         this.preco = preco;
-         if(tamanho=='p')
-            this.tamanho=Tamanho.P;
-        else if (tamanho=='m')
-            this.tamanho=Tamanho.M;
-        else if (tamanho=='g')
-            this.tamanho=Tamanho.G;
+        this.tamanho = tamanho; 
         System.out.println("Assento Infantil adicionado, tamanho: " + this.tamanho.toString());
     }
 
     public double getPreco() {
         return this.preco + getAutomovelDecorado().getPreco();
     }
+
+	public Character getTamanho() {
+		return tamanho;
+	}
+
+	public void setTamanho(Character tamanho) {
+		this.tamanho = tamanho;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
 
     /*@Override
 
@@ -58,5 +55,7 @@ public class AssentoInfantil extends Adicional{
     public String getTamanho(){
         return this.tamanho.toString();
     }*/
+    
+    
 
 }

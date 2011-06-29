@@ -24,9 +24,7 @@ public class TanqueCheio extends Adicional {
         this.getAutomovelDecorado().addAdicionais(this);
         this.preco = preco;
         this.capacidade=capacidade;
-
         System.out.println("Tanque cheio adicionado, valor: "+ this.preco);
-
     }
 
      public double getPreco() {
