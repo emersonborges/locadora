@@ -12,31 +12,36 @@ import locadora.model.automovel.*;
  * @author a90633
  */
 public class GPS extends Adicional{
-
-    private double preco;
- 
+	
+	private String marca;
     
     public GPS(){
     	super();
     }
 
-    public GPS(Automovel a,double preco){
+    public GPS(IAutomovelComponente a,double preco){
         this.setAutomovelDecorado(a);
-        this.getAutomovelDecorado().addAdicionais(this);
-        this.preco=preco;
+       // this.getAutomovelDecorado().addAdicionais(this);
+        setPreco(preco);
         setDecricao("GPS!");
-        System.out.println("GPS adicionado, valor: "+ this.preco+", descricao : "+ getDecricao());
+        System.out.println("GPS adicionado, valor: "+ getPreco()+", descricao : "+ getDecricao());
     }
 
-    @Override
-    public double getPreco() {
-        return this.preco + getAutomovelDecorado().getPreco();
-    }
+	/**
+	 * @param marca the marca to set
+	 */
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
 
-    @Override
-    public void setPreco(double preco){
-        this.preco=preco;
-    }
+	/**
+	 * @return the marca
+	 */
+	public String getMarca() {
+		return marca;
+	}
+
+
     
 
 }

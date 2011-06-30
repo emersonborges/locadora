@@ -51,6 +51,11 @@ public class Caminhao extends Automovel{
     	super();
     }
 
+	@Override
+	public double getPreco() {
+		return getPreco();
+	}
+
     
 
 }

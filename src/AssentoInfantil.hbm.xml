@@ -8,7 +8,6 @@
 		<joined-subclass name="locadora.model.adicional.AssentoInfantil" extends="locadora.model.adicional.Adicional">
 			<key column="Adicional_id"/>
 		
-			<property name="preco"></property>
 			<property name="tamanho"></property>							
 					
 		</joined-subclass>

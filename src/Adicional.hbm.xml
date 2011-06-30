@@ -12,6 +12,7 @@
 		</id>	
 		
 		<property name="decricao"></property>
+		<property name="preco"></property>
 		
 				
 		<many-to-one name="automovelDecorado" class="locadora.model.automovel.Automovel" column="automovel_id"/>

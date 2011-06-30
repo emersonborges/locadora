@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import locadora.model.Reserva;
+import locadora.model.adicional.IAutomovelComponente;
 import locadora.model.observer.*;
 
 /*
@@ -17,7 +18,7 @@ import locadora.model.observer.*;
  *
  * @author a90633
  */
-public abstract class Automovel extends Subject{
+public abstract class Automovel extends Subject implements IAutomovelComponente{
 
 	
     private Set adicionais = new HashSet();
@@ -66,25 +67,13 @@ public abstract class Automovel extends Subject{
 		this.id = id;
 	}
 
-		
-
-	/*public List<Automovel> getAdicionais() {
-		return adicionais;
-	}
-
-	public void setAdicionais(List<Automovel> adicionais) {
-		this.adicionais = adicionais;
-	}*/
-
 	public int getAno() {
 		return ano;
 	}
 
 	public void setAno(int ano) {
 		this.ano = ano;
-	}
-
-	
+	}	
 
 	public int getCapacidade() {
 		return capacidade;
@@ -156,13 +145,13 @@ public abstract class Automovel extends Subject{
         if (this.status=="disponivel")
             return true;
         return false;
-    }
+    }    
 
-    public double getPreco(){
-        return this.preco;
-    }
+    public double getPreco() {
+		return preco;
+	}
 
-    public void setPreco(double preco){
+	public void setPreco(double preco){
         this.preco=preco;
     }
 
@@ -176,9 +165,7 @@ public abstract class Automovel extends Subject{
 
     public void addAdicionais(Automovel a){
         adicionais.add(a);
-    }
-
-   
+    }   
 
 	public String getStatus() {
 		return status;

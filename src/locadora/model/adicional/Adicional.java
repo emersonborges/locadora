@@ -5,21 +5,17 @@
 
 package locadora.model.adicional;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import locadora.model.automovel.*;
 
 /**
  *
  * @author a90633
  */
-public abstract class Adicional extends Automovel {
+public abstract class Adicional implements IAutomovelComponente {
 
 	private Long id;   
-	private Automovel automovelDecorado;    
-    private String decricao;
-    
+	private IAutomovelComponente automovelDecorado;    
+    private String descricao;
+    private double preco;
     
   	public Long getId() {
 		return id;
@@ -31,37 +27,53 @@ public abstract class Adicional extends Automovel {
 
 
     public String getDecricao() {
-        return decricao;
+        return descricao;
     }
 
     public void setDecricao(String decricao) {
-        this.decricao = decricao;
+        this.descricao = decricao;
     }
 
     
-    @Override
-    public abstract double getPreco();
 
 	/**
 	 * @param automovelDecorado the automovelDecorado to set
 	 */
-	public void setAutomovelDecorado(Automovel automovelDecorado) {
+	public void setAutomovelDecorado(IAutomovelComponente automovelDecorado) {
 		this.automovelDecorado = automovelDecorado;
 	}
 
 	/**
 	 * @return the automovelDecorado
 	 */
-	public Automovel getAutomovelDecorado() {
+	public IAutomovelComponente getAutomovelDecorado() {
 		return automovelDecorado;
 	}
 
 	@Override
 	public String toString() {
-		return "Adicional [id=" + id + ", decricao=" + decricao + "]";
+		return "Adicional [id=" + id + ", decricao=" + descricao + "]";
 	}
 	
+    @Override
+    public double getPreco() {
+        return this.preco + getAutomovelDecorado().getPreco();
+    }
+
+    public void setPrecoTotal(double p){
+    	this.preco = p;
+    }
+    
+    public double getPrecoAdicional() {
+        return this.preco;
+    }
+    
+    public void setPreco(double p){
+    	this.preco = p;
+    }
 	
+    
+    
 	
 	
 
