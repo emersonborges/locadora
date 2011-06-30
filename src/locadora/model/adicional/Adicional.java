@@ -32,9 +32,7 @@ public abstract class Adicional implements IAutomovelComponente {
 
     public void setDecricao(String decricao) {
         this.descricao = decricao;
-    }
-
-    
+    }    
 
 	/**
 	 * @param automovelDecorado the automovelDecorado to set

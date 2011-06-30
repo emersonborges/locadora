@@ -1,11 +1,13 @@
 package locadora.padroes;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 import locadora.model.adicional.AssentoInfantil;
 import locadora.model.adicional.GPS;
+import locadora.model.adicional.IAutomovelComponente;
 import locadora.model.adicional.Seguro;
 import locadora.model.adicional.TanqueCheio;
 import locadora.model.automovel.Automovel;
@@ -13,13 +15,17 @@ import locadora.model.automovel.Carro;
 
 
 public class DecoratorTest {
-	private Automovel carro;
 	
+	private IAutomovelComponente carro;	
 	
 	@Before
 	public void setUp(){
-		carro = new Carro();
-		carro.setPreco(300);
+		carro = new Carro(2008,300);
+	}
+	
+	@After
+	public void tearDown(){
+		carro = null;
 	}
 	
 	@Test
