@@ -187,6 +187,17 @@ public abstract class Automovel extends Subject{
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	@Override
+	public String toString() {
+		return "Automovel [id=" + id + ", ano=" + ano + ", capacidade="
+				+ capacidade + ", chassi=" + chassi + ", codCategoria="
+				+ codCategoria + ", consumo=" + consumo + ", cor=" + cor
+				+ ", modelo=" + modelo + ", combustivel=" + combustivel
+				+ ", placa=" + placa + ", preco=" + preco + ", status="
+				+ status + "]";
+	}
   
+	
 
 }

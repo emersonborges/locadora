@@ -16,7 +16,9 @@ public class AssentoInfantil extends Adicional{
      private double preco;
      private Character tamanho;
 
-
+     public AssentoInfantil(){
+    	 super();
+     }
      public enum Tamanho{
          P,M,G;
      }

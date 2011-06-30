@@ -2,6 +2,7 @@ package locadora.persistence.hibernate;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -55,7 +56,8 @@ public class ReservaDaoImpl implements ReservaDao{
 		List<Reserva>  reservas = null;
 		try {
 			transaction = session.beginTransaction();
-			reservas = session.createQuery("from Reserva").list();
+			//Iterator i = session.createQuery("from User user, LogRecord log " + "where user.username = log.username")	.list().iterator();
+			reservas = session.createQuery("from Reserva r, Automovel a" + "where r.automovel_id = a.automovel_id").list();
 			transaction.commit();
 		} catch (Exception e) {
 			if (transaction != null) {
