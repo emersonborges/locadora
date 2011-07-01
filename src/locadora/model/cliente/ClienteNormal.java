@@ -27,6 +27,7 @@ public class ClienteNormal extends Cliente{
     @Override
     public void update(Subject s) {
     	System.out.println("Mandando email - cliente Normal");
+    	this.setUpdateStatus("NORMAL");
     }
 
 	/**

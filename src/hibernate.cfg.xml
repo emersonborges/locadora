@@ -5,7 +5,7 @@
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.connection.url">jdbc:mysql://localhost/locadora?createDatabaseIfNotExist=true</property>
 		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password">jefferson</property>
+<!-- 		<property name="hibernate.connection.password"></property> -->
 
 		<property name="hibernate.c3p0.max_size">10</property>
 		<property name="hibernate.c3p0.min_size">2</property>

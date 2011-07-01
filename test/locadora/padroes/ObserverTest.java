@@ -57,7 +57,7 @@ public class ObserverTest {
 		ClienteVIP vip = new ClienteVIP();
 		
 		carro.registra(gold);
-		carro.registra(vip);
+		carro.registra(vip);	
 		carro.registra(cliente);
 	
 		carro.setStatus("disponivel");

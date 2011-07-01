@@ -170,6 +170,7 @@ public abstract class Automovel extends Subject implements IAutomovelComponente{
 
 	public void setStatus(String status) {
 		this.status = status;
+		notifica();
 	}
 
 	@Override
