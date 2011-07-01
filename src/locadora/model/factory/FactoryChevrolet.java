@@ -35,7 +35,7 @@ public class FactoryChevrolet implements FactoryAutomovel{
 	    	carro =  new Montana(2007,"Azul",Combustivel.gasolina,25000,Status.alugado);
 	    }
 	    else if(type.equals("Zafira")){
-	    	carro = new Zafira(2008,"Azul",Combustivel.alcool,15000,Status.manutencao);
+	    	carro = new Zafira(2008,"Azul",Combustivel.alcool,22000,Status.manutencao);
 	    }	  
 		return carro;
 	}
