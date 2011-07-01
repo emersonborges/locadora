@@ -59,4 +59,11 @@ public class Locacao {
 	public Funcionario getFuncionario() {
 		return funcionario;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Locacao [id=" + id + "]";
+	}
+	
 }

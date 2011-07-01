@@ -1,10 +1,12 @@
 package locadora.dao.reservas;
 
+import java.util.Iterator;
 import java.util.List;
 
 import locadora.model.Funcionario;
 import locadora.model.Locacao;
 import locadora.model.Reserva;
+import locadora.model.automovel.Automovel;
 import locadora.persistence.hibernate.LocacaoDaoImpl;
 import locadora.persistence.hibernate.factory.DaoFactory;
 
@@ -46,11 +48,24 @@ public class TestLocacaoDaoImpl {
 	@Test
 	public void listarTest() throws Exception{
 
-		/*List<Locacao> locacoes = locacaoDaoImpl.listar();
-		assertNotNull(locacoes);*/
-		
-
+		Iterator iterator = locacaoDaoImpl.listar();
+		assertNotNull(iterator);
+		System.out.println("\n$Locacoes$\n");
+		while (iterator.hasNext()) {
+			Object[] objectGroup = (Object[]) iterator.next();
+			Locacao locacao = (Locacao) objectGroup[0];
+			Automovel automovel = (Automovel) objectGroup[1];
+			Funcionario funcionario = (Funcionario) objectGroup[2];
+			System.out.println(locacao);
+			System.out.println("");
+			System.out.println(automovel);
+			System.out.println("");
+			System.out.println(funcionario);
+			System.out.println("\n\t\t *****");
+		}
+		System.out.println("\n");
 	}
+	
 	@Test
 	public void removerTest(){
 		

@@ -143,16 +143,22 @@ public class Funcionario{
 		this.cidade = cidade;
 	}
 
-
-
 	public Set<Locacao> getDevolucoes() {
 		return devolucoes;
 	}
 
-
-
 	public void setDevolucoes(Set<Locacao> devolucoes) {
 		this.devolucoes = devolucoes;
+	}
+
+	@Override
+	public String toString() {
+		return "Funcionario [id=" + id + ", celular=" + celular + ", cep="
+				+ cep + ", cpf=" + cpf + ", dataNascimento=" + dataNascimento
+				+ ", email=" + email + ", endereco=" + endereco + ", nome="
+				+ nome + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", rg=" + rg + ", telefone=" + telefone + ", cidade="
+				+ cidade + ", carteiraTrabalho=" + carteiraTrabalho + "]";
 	}
 	
 		

@@ -1,5 +1,6 @@
 package locadora.persistence.hibernate;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -34,9 +35,24 @@ public class DevolucaoDaoImpl implements DevolucaoDao{
 	}
 
 	@Override
-	public List<Devolucao> listar() {
-		// TODO Auto-generated method stub
-		return null;
+	public Iterator listar() throws Exception {
+		Session session = MyHibernateSingleton.getInstance().openSession();
+		Transaction transaction = null;
+		Iterator iterator = null;
+		try {
+			transaction = session.beginTransaction();
+			String q = "from Locacao l, Automovel a, Funcionario f where l.id=a.id and l.funcionario.id=f.id";
+			iterator = session.createQuery(q).list().iterator();
+			transaction.commit();
+		} catch (Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+			throw e;
+		} finally {
+			session.close();
+		}
+		return iterator;
 	}
 
 	@Override

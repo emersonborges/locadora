@@ -1,5 +1,6 @@
 package locadora.persistence.hibernate;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -32,13 +33,14 @@ public class LocacaoDaoImpl implements LocacaoDao{
 	}
 
 	@Override
-	public List<Locacao> listar() throws Exception {
+	public Iterator listar() throws Exception {
 		Session session = MyHibernateSingleton.getInstance().openSession();
 		Transaction transaction = null;
-		List<Locacao> locacoes = null;
+		Iterator iterator = null;
 		try {
 			transaction = session.beginTransaction();
-			locacoes = (List<Locacao>) session.createQuery("from Locacao l inner join Automovel a on l.automovel_id=a.automovel_id");
+			String q = "from Locacao l, Automovel a, Funcionario f where l.id=a.id and l.funcionario.id=f.id";
+			iterator = session.createQuery(q).list().iterator();
 			transaction.commit();
 		} catch (Exception e) {
 			if (transaction != null) {
@@ -48,7 +50,7 @@ public class LocacaoDaoImpl implements LocacaoDao{
 		} finally {
 			session.close();
 		}
-		return locacoes;
+		return iterator;
 	}
 
 	@Override
