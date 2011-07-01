@@ -1,8 +1,6 @@
 package locadora.model.factory;
 
 import locadora.model.automovel.Automovel;
-import locadora.model.automovel.Automovel.Combustivel;
-import locadora.model.automovel.Automovel.Status;
 import locadora.model.automovel.Carro;
 
 public class FactoryChevrolet implements FactoryAutomovel{

@@ -2,7 +2,7 @@ package locadora.persistence.dao.hibernate;
 
 import java.util.List;
 
-import locadora.model.adicional.Adicional;
+
 import locadora.model.desconto.Desconto;
 
 public interface DescontoDao {

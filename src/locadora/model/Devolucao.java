@@ -1,10 +1,5 @@
 package locadora.model;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.management.loading.PrivateClassLoader;
-
 public class Devolucao {
 	
 	private Long id;

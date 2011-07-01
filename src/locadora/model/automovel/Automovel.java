@@ -1,11 +1,7 @@
 package locadora.model.automovel;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-
-import locadora.model.Reserva;
 import locadora.model.adicional.IAutomovelComponente;
 import locadora.model.observer.*;
 

@@ -3,7 +3,6 @@ package locadora.padroes;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import locadora.model.automovel.Carro;
-import locadora.model.automovel.Automovel.Status;
 import locadora.model.factory.FactoryAutomovel;
 import locadora.model.factory.FactoryVW;
 

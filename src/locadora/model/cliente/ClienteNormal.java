@@ -5,7 +5,6 @@
 
 package locadora.model.cliente;
 
-import java.util.Date;
 import locadora.model.desconto.*;
 import locadora.model.observer.*;
 

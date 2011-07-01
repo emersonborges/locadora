@@ -10,7 +10,6 @@ import locadora.model.adicional.GPS;
 import locadora.model.adicional.IAutomovelComponente;
 import locadora.model.adicional.Seguro;
 import locadora.model.adicional.TanqueCheio;
-import locadora.model.automovel.Automovel;
 import locadora.model.automovel.Carro;
 
 

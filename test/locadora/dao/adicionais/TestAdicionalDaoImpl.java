@@ -12,26 +12,12 @@ import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.hibernate.Transaction;
 import org.hibernate.classic.Session;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestAdicionalDaoImpl {
 
-	
-/*	@BeforeClass
-	public void setUp() throws Exception {
-		session = MyHibernateSingleton.getInstance().openSession();
-		transaction = session.beginTransaction();
-	}
 
-	@AfterClass
-	public void tearDown() throws Exception {
-		transaction.commit();
-		session.close();
-	}*/
-	
 	@Test
 	public void testInserir() throws Exception{
 		

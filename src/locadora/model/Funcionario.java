@@ -4,8 +4,6 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import locadora.model.observer.Subject;
-
 public class Funcionario{
 	
 	private Long id;

@@ -1,10 +1,7 @@
 package locadora.dao.veiculos;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+
 import locadora.model.automovel.Carro;
-import locadora.model.automovel.Automovel.Status;
-import locadora.model.factory.FactoryFiat;
 import locadora.persistence.dao.hibernate.CarroDaoImpl;
 import locadora.persistence.dao.hibernate.factory.DaoFactory;
 

@@ -9,7 +9,6 @@ import locadora.model.Reserva;
 import locadora.model.automovel.Automovel;
 import locadora.persistence.dao.hibernate.DevolucaoDaoImpl;
 import locadora.persistence.dao.hibernate.factory.DaoFactory;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,7 +1,6 @@
 package locadora.persistence.dao.hibernate;
 
 import java.util.Iterator;
-import java.util.List;
 
 import locadora.model.Locacao;
 

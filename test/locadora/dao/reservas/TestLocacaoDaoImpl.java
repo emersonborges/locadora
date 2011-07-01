@@ -1,7 +1,6 @@
 package locadora.dao.reservas;
 
 import java.util.Iterator;
-import java.util.List;
 
 import locadora.model.Funcionario;
 import locadora.model.Locacao;

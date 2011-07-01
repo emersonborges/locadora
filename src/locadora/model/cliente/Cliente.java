@@ -8,14 +8,7 @@ package locadora.model.cliente;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import sun.java2d.HeadlessGraphicsEnvironment;
 import locadora.model.Reserva;
-import locadora.model.desconto.*;
 import locadora.model.observer.*;
 
 /**

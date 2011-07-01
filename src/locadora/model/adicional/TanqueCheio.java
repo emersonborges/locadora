@@ -4,7 +4,6 @@
  */
 
 package locadora.model.adicional;
-import locadora.model.automovel.*;
 
 /**
  *

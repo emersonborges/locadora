@@ -4,13 +4,9 @@ import junit.framework.TestCase;
 import locadora.model.cliente.ClienteGOLD;
 import locadora.model.cliente.ClienteNormal;
 import locadora.model.cliente.ClienteVIP;
-import locadora.model.desconto.Desconto;
 import locadora.model.desconto.DescontoGOLD;
 import locadora.model.desconto.DescontoVIP;
 import locadora.model.desconto.SemDesconto;
-
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 

@@ -1,20 +1,14 @@
 package locadora.dao.reservas;
 
 import java.util.Iterator;
-import java.util.List;
-
 import locadora.model.Reserva;
 import locadora.model.automovel.Automovel;
 import locadora.model.automovel.Carro;
 import locadora.model.cliente.Cliente;
 import locadora.model.cliente.ClienteNormal;
-import locadora.persistence.dao.hibernate.MyHibernateSingleton;
 import locadora.persistence.dao.hibernate.ReservaDaoImpl;
 import locadora.persistence.dao.hibernate.factory.DaoFactory;
 import static org.junit.Assert.*;
-
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

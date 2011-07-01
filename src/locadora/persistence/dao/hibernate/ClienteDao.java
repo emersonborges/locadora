@@ -2,7 +2,6 @@ package locadora.persistence.dao.hibernate;
 
 import java.util.List;
 import locadora.model.cliente.Cliente;
-import locadora.model.cliente.ClienteNormal;
 
 public interface ClienteDao {
 	

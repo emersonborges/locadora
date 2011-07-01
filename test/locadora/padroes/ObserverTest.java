@@ -1,5 +1,4 @@
 package locadora.padroes;
-import locadora.model.automovel.Automovel.Status;
 import locadora.model.automovel.Carro;
 import locadora.model.cliente.ClienteGOLD;
 import locadora.model.cliente.ClienteNormal;
