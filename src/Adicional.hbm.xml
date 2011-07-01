@@ -12,13 +12,10 @@
 		</id>	
 		
 		<property name="decricao"></property>
+		<property name="preco"></property>
 		
 				
-		 <set name="automoveis" table="AdicionaisAutomovel">
-			<key column="adicional_id"/>
-			<many-to-many class="locadora.model.adicional.Adicional" column="automovel_id"/>
-		</set> 
-		
+		<many-to-one name="automovelDecorado" class="locadora.model.automovel.Automovel" column="automovel_id"/>
 		
 		
 	</class>

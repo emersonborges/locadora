@@ -5,58 +5,35 @@
 
 package locadora.model.adicional;
 
-import locadora.model.automovel.*;
 
 /**
  *
  * @author a90633
  */
 public class AssentoInfantil extends Adicional{
+     
+     private Character tamanho;
 
-     private double preco;
-     private Enum<Tamanho> tamanho;
-
-
+     public AssentoInfantil(){
+    	 super();
+     }
      public enum Tamanho{
          P,M,G;
      }
 
-     public void setTamanho(char tamanho){
-
-        if(tamanho=='p')
-            this.tamanho=Tamanho.P;
-        else if (tamanho=='m')
-            this.tamanho=Tamanho.M;
-        else if (tamanho=='g')
-            this.tamanho=Tamanho.G;
-    }
-
-    public AssentoInfantil(Automovel a,double preco,char tamanho){
+    public AssentoInfantil(IAutomovelComponente a,double preco,char tamanho){
         this.setAutomovelDecorado(a);
-        this.getAutomovelDecorado().addAdicionais(this);
-        this.preco = preco;
-         if(tamanho=='p')
-            this.tamanho=Tamanho.P;
-        else if (tamanho=='m')
-            this.tamanho=Tamanho.M;
-        else if (tamanho=='g')
-            this.tamanho=Tamanho.G;
+       // this.getAutomovelDecorado().addAdicionais(this);
+        setPreco(preco);
+        this.tamanho = tamanho; 
         System.out.println("Assento Infantil adicionado, tamanho: " + this.tamanho.toString());
     }
 
-    public double getPreco() {
-        return this.preco + getAutomovelDecorado().getPreco();
-    }
+	public Character getTamanho() {
+		return tamanho;
+	}
 
-    /*@Override
-
-    @Override
-    public void setPreco(double preco){
-        this.preco=preco;
-    }
-
-    public String getTamanho(){
-        return this.tamanho.toString();
-    }*/
-
+	public void setTamanho(Character tamanho) {
+		this.tamanho = tamanho;
+	}   
 }

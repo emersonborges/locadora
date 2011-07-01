@@ -1,0 +1,5 @@
+insert into Devolucao values(1,1);
+insert into Devolucao values(2,1);
+insert into Devolucao values(3,1);
+insert into Devolucao values(4,1);
+insert into Devolucao values(5,1);

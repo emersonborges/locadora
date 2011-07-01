@@ -4,8 +4,6 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import locadora.model.observer.Subject;
-
 public class Funcionario{
 	
 	private Long id;
@@ -24,9 +22,8 @@ public class Funcionario{
 	private String carteiraTrabalho;
 	
 	
-	
-	
 	private Set<Locacao> locacoes = new HashSet<Locacao>();
+	private Set<Locacao> devolucoes = new HashSet<Locacao>();
 	
 	public Funcionario(){
 		super();
@@ -142,6 +139,24 @@ public class Funcionario{
 	}
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
+	}
+
+	public Set<Locacao> getDevolucoes() {
+		return devolucoes;
+	}
+
+	public void setDevolucoes(Set<Locacao> devolucoes) {
+		this.devolucoes = devolucoes;
+	}
+
+	@Override
+	public String toString() {
+		return "Funcionario [id=" + id + ", celular=" + celular + ", cep="
+				+ cep + ", cpf=" + cpf + ", dataNascimento=" + dataNascimento
+				+ ", email=" + email + ", endereco=" + endereco + ", nome="
+				+ nome + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", rg=" + rg + ", telefone=" + telefone + ", cidade="
+				+ cidade + ", carteiraTrabalho=" + carteiraTrabalho + "]";
 	}
 	
 		

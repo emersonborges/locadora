@@ -5,9 +5,6 @@
 
 package locadora.model.cliente;
 
-import java.util.Date;
-
-import locadora.model.Pessoa;
 import locadora.model.desconto.*;
 import locadora.model.observer.*;
 
@@ -22,7 +19,6 @@ public class ClienteNormal extends Cliente{
 	public ClienteNormal(String n, String c){
 		setNome(n);
 		setCidade(c);
-		this.desconto = new SemDesconto();
 	}
 	
     public ClienteNormal(){

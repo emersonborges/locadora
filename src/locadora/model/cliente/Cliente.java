@@ -6,13 +6,9 @@
 package locadora.model.cliente;
 
 import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-import locadora.model.Pessoa;
-import locadora.model.desconto.*;
+import java.util.HashSet;
+import java.util.Set;
+import locadora.model.Reserva;
 import locadora.model.observer.*;
 
 /**
@@ -39,6 +35,18 @@ public abstract class Cliente extends Observer{
 	private String updateStatus;
 	private Date clienteDesde; // data de cadastro do cliente
 	
+	private Set reservas = new HashSet<Reserva>();
+	
+	
+	
+	public Set getReservas() {
+		return reservas;
+	}
+
+	public void setReservas(Set reservas) {
+		this.reservas = reservas;
+	}
+
 	public String getUpdateStatus() {
 		return updateStatus;
 	}
@@ -167,6 +175,19 @@ public abstract class Cliente extends Observer{
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
 	}
+
+	@Override
+	public String toString() {
+		return "Cliente [id=" + id + ", celular=" + celular + ", cep=" + cep
+				+ ", cpf=" + cpf + ", dataNascimento=" + dataNascimento
+				+ ", email=" + email + ", endereco=" + endereco + ", nome="
+				+ nome + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", rg=" + rg + ", telefone=" + telefone + ", cidade="
+				+ cidade + ", updateStatus=" + updateStatus + ", clienteDesde="
+				+ clienteDesde + "]";
+	}
+
+	
 	
 	
 	

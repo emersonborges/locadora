@@ -1,10 +1,8 @@
 package locadora.model.automovel;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-
+import locadora.model.adicional.IAutomovelComponente;
 import locadora.model.observer.*;
 
 /*
@@ -16,12 +14,13 @@ import locadora.model.observer.*;
  *
  * @author a90633
  */
-public abstract class Automovel extends Subject{
+public abstract class Automovel extends Subject implements IAutomovelComponente{
 
-  /* List<Automovel> adicionais = new ArrayList<Automovel>();
-   List<Categoria> categorias = new ArrayList<Categoria>();*/
+	
     private Set adicionais = new HashSet();
 	private Set categorias = new HashSet();
+	
+	
 	
     private Long id;
     private int ano;
@@ -35,11 +34,12 @@ public abstract class Automovel extends Subject{
     private String placa;
     private double preco;
     private String status;
+    private String nome;
     
-   
+/*    private Reserva reserva;*/
     
-    
-  
+
+
 	public Set getAdicionais() {
 		return adicionais;
 	}
@@ -64,25 +64,13 @@ public abstract class Automovel extends Subject{
 		this.id = id;
 	}
 
-		
-
-	/*public List<Automovel> getAdicionais() {
-		return adicionais;
-	}
-
-	public void setAdicionais(List<Automovel> adicionais) {
-		this.adicionais = adicionais;
-	}*/
-
 	public int getAno() {
 		return ano;
 	}
 
 	public void setAno(int ano) {
 		this.ano = ano;
-	}
-
-	
+	}	
 
 	public int getCapacidade() {
 		return capacidade;
@@ -154,13 +142,13 @@ public abstract class Automovel extends Subject{
         if (this.status=="disponivel")
             return true;
         return false;
-    }
+    }    
 
-    public double getPreco(){
-        return this.preco;
-    }
+    public double getPreco() {
+		return preco;
+	}
 
-    public void setPreco(double preco){
+	public void setPreco(double preco){
         this.preco=preco;
     }
 
@@ -174,9 +162,7 @@ public abstract class Automovel extends Subject{
 
     public void addAdicionais(Automovel a){
         adicionais.add(a);
-    }
-
-   
+    }   
 
 	public String getStatus() {
 		return status;
@@ -185,6 +171,31 @@ public abstract class Automovel extends Subject{
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	@Override
+	public String toString() {
+		return "Automovel [id=" + id + ", ano=" + ano + ", capacidade="
+				+ capacidade + ", chassi=" + chassi + ", codCategoria="
+				+ codCategoria + ", consumo=" + consumo + ", cor=" + cor
+				+ ", modelo=" + modelo + ", combustivel=" + combustivel
+				+ ", placa=" + placa + ", preco=" + preco + ", status="
+				+ status + "]";
+	}
+
+	/**
+	 * @param nome the nome to set
+	 */
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	/**
+	 * @return the nome
+	 */
+	public String getNome() {
+		return nome;
+	}
   
+	
 
 }

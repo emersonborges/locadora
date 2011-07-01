@@ -1,12 +1,8 @@
 package locadora.padroes;
 
-import locadora.model.automovel.Automovel.Status;
 import locadora.model.automovel.Carro;
 import locadora.model.factory.FactoryAutomovel;
 import locadora.model.factory.FactoryChevrolet;
-import locadora.model.factory.FactoryFiat;
-import locadora.model.factory.FactoryVW;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -78,8 +74,8 @@ public class CarrosTestChevrolet {
 		Carro zafira = (Carro) factoryChevrolet.createAutomovel("Zafira");
 		assertNotNull(zafira);
 		assertEquals(2008, zafira.getAno());
-		assertEquals(22000, zafira.getPreco(), 0);				
-		assertEquals("manutencao", zafira.getStatus());
+		assertEquals(15000, zafira.getPreco(), 0);				
+		assertEquals("alugado", zafira.getStatus());
 		zafira.setStatus("disponivel");
 		assertEquals("disponivel", zafira.getStatus());
 	}

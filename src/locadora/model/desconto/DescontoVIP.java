@@ -32,6 +32,9 @@ public class DescontoVIP extends Desconto{
 	public void setDesconto(double desconto) {
 		this.desconto = desconto;
 	}
-
+	@Override
+	public String toString() {
+		return "DescontoGOLD [id  "+getId()+" desconto=" + desconto + "]";
+	}
     
 }

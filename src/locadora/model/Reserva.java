@@ -17,15 +17,17 @@ public class Reserva {
 	
 	private Cliente cliente;
 	private Automovel automovel;
+	private Devolucao devolucao;
+	private Locacao locacao;
 	
 	public Reserva(){
 		super();
 	}
 	
 	public Reserva(Cliente c, Automovel a, double valor){
-		this.cliente = c;
-		this.automovel = a;
-		this.valor = valor;
+		setAutomovel(a);
+		setCliente(c);
+		setValor(valor);
 	}
 	
 	public Reserva(Cliente c, Automovel a, Date dateDevolucao, Date dateRetirada, double multa, double valor){
@@ -38,6 +40,15 @@ public class Reserva {
 		
 	}
 	
+	
+	public Devolucao getDevolucao() {
+		return devolucao;
+	}
+
+	public void setDevolucao(Devolucao devolucao) {
+		this.devolucao = devolucao;
+	}
+
 	public Date getDataDevolucao() {
 		return dataDevolucao;
 	}
@@ -95,6 +106,22 @@ public class Reserva {
 	public void setAutomovel(Automovel automovel) {
 		this.automovel = automovel;
 	}
+
+	public Locacao getLocacao() {
+		return locacao;
+	}
+
+	public void setLocacao(Locacao locacao) {
+		this.locacao = locacao;
+	}
+
+	@Override
+	public String toString() {
+		return "Reserva [id=" + id + ", dataDevolucao=" + dataDevolucao
+				+ ", dataRetirada=" + dataRetirada + ", multa=" + multa
+				+ ", valor=" + valor + "]";
+	}
+	
 	
 	
 }

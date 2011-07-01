@@ -1,0 +1,1 @@
+Select * from Reserva r, Automovel a, Cliente c where r.automovel_id = a.automovel_id and r.cliente_id=c.cliente_id

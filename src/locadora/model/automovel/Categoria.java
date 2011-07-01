@@ -1,6 +1,5 @@
 package locadora.model.automovel;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -37,22 +36,12 @@ public class Categoria {
 		this.quantidade = quantidade;
 	}
 
-		
-/*	public ArrayList<Automovel> getAutomoveis() {
-		return automoveis;
-	}
-	public void setAutomoveis(ArrayList<Automovel> automoveis) {
-		this.automoveis = automoveis;
-	}*/
-	
 	public void setId(Long id) {
 		this.id = id;
 	}
 	public Long getId() {
 		return id;
-	}
-	
-	
+	}	
 	
 	public Set getAutomoveis() {
 		return automoveis;
@@ -60,8 +49,6 @@ public class Categoria {
 	public void setAutomoveis(Set automoveis) {
 		this.automoveis = automoveis;
 	}
-
-
 
 	private Long id;
 	private int codCategoria;

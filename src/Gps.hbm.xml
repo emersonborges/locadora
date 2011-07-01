@@ -8,8 +8,7 @@
 		<joined-subclass name="locadora.model.adicional.GPS" extends="locadora.model.adicional.Adicional">
 			<key column="Adicional_id"/>
 		
-			<property name="preco"></property>
-			<property name="descricao"></property>					
+			<property name="marca"></property>
 					
 		</joined-subclass>
 

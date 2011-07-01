@@ -7,9 +7,10 @@
 		
 	<class name="locadora.model.automovel.Automovel">
 		<id name="id" column="automovel_id" type="java.lang.Long">
-			<generator class="native"></generator>
+			 <generator class="native">			
+			 </generator>
 		</id>	
-		
+		<property name="nome"></property>
 		<property name="ano"/>	
 		<property name="capacidade"/>
 		<property name="chassi"/>
@@ -28,10 +29,9 @@
 	  
 	  <set name="adicionais" table="AdicionaisAutomovel" inverse="true">
 			<key column="automovel_id"/>
-			<many-to-many class="locadora.model.adicional.Adicional" column="adicional_id" />
+			<one-to-many class="locadora.model.adicional.Adicional"/>
 	  </set>   
-	  		
+	 
 	</class>
 
 </hibernate-mapping>
-

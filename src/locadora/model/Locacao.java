@@ -1,23 +1,25 @@
 package locadora.model;
 
-import java.util.HashSet;
-import java.util.Set;
 
 public class Locacao {
 	
 	private Long id;
 	private Funcionario funcionario;
-	private Set<Reserva> reservas = new HashSet<Reserva>();
+	private Reserva reserva;
 	
 	
-
+	public Locacao(Funcionario f, Reserva r){
+		this.funcionario = f;
+		this.reserva = r;
+	}
 	
-	public Set<Reserva> getReservas() {
-		return reservas;
+	
+	public Reserva getReserva() {
+		return reserva;
 	}
 
-	public void setReservas(Set<Reserva> reservas) {
-		this.reservas = reservas;
+	public void setReserva(Reserva reserva) {
+		this.reserva = reserva;
 	}
 
 	public Locacao(){
@@ -55,4 +57,11 @@ public class Locacao {
 	public Funcionario getFuncionario() {
 		return funcionario;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Locacao [id=" + id + "]";
+	}
+	
 }
