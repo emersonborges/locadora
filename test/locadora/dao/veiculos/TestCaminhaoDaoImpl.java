@@ -4,10 +4,11 @@ import locadora.model.automovel.Caminhao;
 import locadora.persistence.dao.hibernate.CaminhaoDaoImpl;
 import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestCaminhaoDaoImpl {
-	@Test
+	@Test @Ignore
 	public void inserirTest() throws Exception {
 		
 		CaminhaoDaoImpl  caminhaoDaoImpl = (CaminhaoDaoImpl) DaoFactory.getInstance().createDao("CaminhaoDao");

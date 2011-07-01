@@ -12,6 +12,7 @@ import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.hibernate.Transaction;
 import org.hibernate.classic.Session;
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -42,7 +43,7 @@ public class TestAdicionalDaoImpl {
 	public void testEditar(){
 		
 	}
-	@Test
+	@Test @Ignore
 	public void testListAll(){
 		Session session = MyHibernateSingleton.getInstance().openSession();
 		Transaction transaction = session.beginTransaction();

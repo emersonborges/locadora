@@ -11,6 +11,7 @@ import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -50,10 +51,11 @@ public class TestClienteDaoImpl {
 			System.out.println(cliente.toString());
 		}
 	}
-	@Test
+	@Test @Ignore
 	public void removerTest() throws Exception{
 		Cliente cliente = new ClienteNormal();
 		cliente.setId((long) 16);
 		clienteDaoImpl.remover(cliente);		
 	}
+
 }

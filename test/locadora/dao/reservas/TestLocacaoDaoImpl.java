@@ -11,6 +11,7 @@ import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -28,7 +29,7 @@ public class TestLocacaoDaoImpl {
 		locacaoDaoImpl = null;
 	}
 	
-	@Test
+	@Test @Ignore
 	public void inserirTest() throws Exception{		
 				
 		Locacao locacao = new Locacao();		

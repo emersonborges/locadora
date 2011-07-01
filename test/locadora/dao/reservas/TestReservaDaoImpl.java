@@ -11,6 +11,7 @@ import locadora.persistence.dao.hibernate.factory.DaoFactory;
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 
@@ -27,7 +28,7 @@ public class TestReservaDaoImpl {
 	public void tearDown() {
 		reservaDaoImpl = null;
 	}
-	@Test
+	@Test @Ignore
 	public void inserirTest() throws Exception{
 		assertNotNull(reservaDaoImpl);		
 		Cliente cliente = new ClienteNormal();
@@ -66,7 +67,7 @@ public class TestReservaDaoImpl {
 		}			
 		System.out.println("\n");
 	}
-	@Test
+	@Test @Ignore
 	public void removerTest() throws Exception{
 		Reserva reserva = new Reserva();
 		reserva.setId((long) 1);

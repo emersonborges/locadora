@@ -12,6 +12,7 @@ import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -51,7 +52,7 @@ public class TestDescontoDaoImpl {
 			System.out.println(desconto.toString());
 		}
 	}
-	@Test
+	@Test @Ignore
 	public void removerTest() throws Exception{
 		Desconto desconto = new DescontoGOLD();
 		desconto.setId((long) 4);
