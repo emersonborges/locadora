@@ -13,10 +13,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 import sun.java2d.HeadlessGraphicsEnvironment;
-
-import locadora.model.Pessoa;
 import locadora.model.Reserva;
 import locadora.model.desconto.*;
 import locadora.model.observer.*;

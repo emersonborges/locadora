@@ -2,8 +2,8 @@ package locadora.dao.veiculos;
 
 import locadora.model.automovel.Automovel;
 import locadora.model.automovel.Carro;
-import locadora.persistence.hibernate.AutomovelDaoImpl;
-import locadora.persistence.hibernate.factory.DaoFactory;
+import locadora.persistence.dao.hibernate.AutomovelDaoImpl;
+import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.junit.Test;
 

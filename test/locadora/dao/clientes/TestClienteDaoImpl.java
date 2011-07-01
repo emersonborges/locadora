@@ -6,8 +6,8 @@ import java.util.List;
 import locadora.model.cliente.Cliente;
 import locadora.model.cliente.ClienteNormal;
 import locadora.model.desconto.SemDesconto;
-import locadora.persistence.hibernate.ClienteDaoImpl;
-import locadora.persistence.hibernate.factory.DaoFactory;
+import locadora.persistence.dao.hibernate.ClienteDaoImpl;
+import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.junit.After;
 import org.junit.Before;

@@ -6,8 +6,8 @@ import java.util.Set;
 import locadora.model.automovel.Automovel;
 import locadora.model.automovel.Carro;
 import locadora.model.automovel.Categoria;
-import locadora.persistence.hibernate.CategoriaDaoImpl;
-import locadora.persistence.hibernate.factory.DaoFactory;
+import locadora.persistence.dao.hibernate.CategoriaDaoImpl;
+import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.junit.Test;
 

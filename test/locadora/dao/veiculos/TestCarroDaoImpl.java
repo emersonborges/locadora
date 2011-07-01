@@ -5,8 +5,8 @@ import static org.junit.Assert.assertNotNull;
 import locadora.model.automovel.Carro;
 import locadora.model.automovel.Automovel.Status;
 import locadora.model.factory.FactoryFiat;
-import locadora.persistence.hibernate.CarroDaoImpl;
-import locadora.persistence.hibernate.factory.DaoFactory;
+import locadora.persistence.dao.hibernate.CarroDaoImpl;
+import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.junit.Test;
 

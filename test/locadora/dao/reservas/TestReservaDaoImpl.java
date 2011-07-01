@@ -8,9 +8,9 @@ import locadora.model.automovel.Automovel;
 import locadora.model.automovel.Carro;
 import locadora.model.cliente.Cliente;
 import locadora.model.cliente.ClienteNormal;
-import locadora.persistence.hibernate.MyHibernateSingleton;
-import locadora.persistence.hibernate.ReservaDaoImpl;
-import locadora.persistence.hibernate.factory.DaoFactory;
+import locadora.persistence.dao.hibernate.MyHibernateSingleton;
+import locadora.persistence.dao.hibernate.ReservaDaoImpl;
+import locadora.persistence.dao.hibernate.factory.DaoFactory;
 import static org.junit.Assert.*;
 
 import org.hibernate.Session;

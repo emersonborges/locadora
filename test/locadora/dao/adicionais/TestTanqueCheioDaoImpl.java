@@ -3,8 +3,8 @@ package locadora.dao.adicionais;
 import locadora.model.adicional.TanqueCheio;
 import locadora.model.automovel.Automovel;
 import locadora.model.automovel.Carro;
-import locadora.persistence.hibernate.TanqueCheioDaoImpl;
-import locadora.persistence.hibernate.factory.DaoFactory;
+import locadora.persistence.dao.hibernate.TanqueCheioDaoImpl;
+import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.junit.Test;
 

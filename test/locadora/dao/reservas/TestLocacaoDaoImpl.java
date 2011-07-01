@@ -7,8 +7,8 @@ import locadora.model.Funcionario;
 import locadora.model.Locacao;
 import locadora.model.Reserva;
 import locadora.model.automovel.Automovel;
-import locadora.persistence.hibernate.LocacaoDaoImpl;
-import locadora.persistence.hibernate.factory.DaoFactory;
+import locadora.persistence.dao.hibernate.LocacaoDaoImpl;
+import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.junit.After;
 import org.junit.Before;

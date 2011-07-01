@@ -1,8 +1,8 @@
 package locadora.dao.funcionarios;
 
 import locadora.model.Funcionario;
-import locadora.persistence.hibernate.FuncionarioDaoImpl;
-import locadora.persistence.hibernate.factory.DaoFactory;
+import locadora.persistence.dao.hibernate.FuncionarioDaoImpl;
+import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.junit.Test;
 

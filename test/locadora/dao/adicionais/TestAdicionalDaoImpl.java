@@ -6,9 +6,9 @@ import locadora.model.adicional.Adicional;
 import locadora.model.adicional.GPS;
 import locadora.model.automovel.Automovel;
 import locadora.model.automovel.Carro;
-import locadora.persistence.hibernate.AdicionalDaoImpl;
-import locadora.persistence.hibernate.MyHibernateSingleton;
-import locadora.persistence.hibernate.factory.DaoFactory;
+import locadora.persistence.dao.hibernate.AdicionalDaoImpl;
+import locadora.persistence.dao.hibernate.MyHibernateSingleton;
+import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.hibernate.Transaction;
 import org.hibernate.classic.Session;

@@ -7,8 +7,8 @@ import locadora.model.desconto.Desconto;
 import locadora.model.desconto.DescontoGOLD;
 import locadora.model.desconto.DescontoVIP;
 import locadora.model.desconto.SemDesconto;
-import locadora.persistence.hibernate.DescontoDaoImpl;
-import locadora.persistence.hibernate.factory.DaoFactory;
+import locadora.persistence.dao.hibernate.DescontoDaoImpl;
+import locadora.persistence.dao.hibernate.factory.DaoFactory;
 
 import org.junit.After;
 import org.junit.Before;
