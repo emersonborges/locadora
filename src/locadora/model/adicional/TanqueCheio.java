@@ -27,10 +27,6 @@ public class TanqueCheio extends Adicional {
         System.out.println("Tanque cheio adicionado, valor: "+ getPreco());
     }
 
-     public double getPreco() {
-        return getPreco() + getAutomovelDecorado().getPreco();
-    }
-
 	public int getCapacidade() {
 		return capacidade;
 	}

@@ -1,10 +1,13 @@
 package locadora.persistence.hibernate;
 
+import java.util.Iterator;
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import locadora.model.Reserva;
 
@@ -50,14 +53,13 @@ public class ReservaDaoImpl implements ReservaDao{
 	}
 
 	@Override
-	public List<Reserva> listar() throws Exception {
+	public Iterator listar() throws Exception {
 		Session session = MyHibernateSingleton.getInstance().openSession();
 		Transaction transaction = null;
-		List<Reserva>  reservas = null;
+		Iterator iterator = null;
 		try {
 			transaction = session.beginTransaction();
-			//Iterator i = session.createQuery("from User user, LogRecord log " + "where user.username = log.username")	.list().iterator();
-			reservas = session.createQuery("from Reserva r, Automovel a" + "where r.automovel_id = a.automovel_id").list();
+			iterator = session.createQuery("from Reserva r, Automovel a, Cliente c " +	"where r.id = a.id and "+" r.cliente.id=c.id").list().iterator();		    
 			transaction.commit();
 		} catch (Exception e) {
 			if (transaction != null) {
@@ -67,7 +69,7 @@ public class ReservaDaoImpl implements ReservaDao{
 		} finally {
 			session.close();
 		}
-		return reservas;
+		return iterator;
 	}
 
 	@Override

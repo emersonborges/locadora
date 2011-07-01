@@ -38,6 +38,7 @@ public abstract class Automovel extends Subject implements IAutomovelComponente{
     private String placa;
     private double preco;
     private String status;
+    private String nome;
     
 /*    private Reserva reserva;*/
     
@@ -183,6 +184,20 @@ public abstract class Automovel extends Subject implements IAutomovelComponente{
 				+ ", modelo=" + modelo + ", combustivel=" + combustivel
 				+ ", placa=" + placa + ", preco=" + preco + ", status="
 				+ status + "]";
+	}
+
+	/**
+	 * @param nome the nome to set
+	 */
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	/**
+	 * @return the nome
+	 */
+	public String getNome() {
+		return nome;
 	}
   
 	

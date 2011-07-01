@@ -10,7 +10,7 @@
 			 <generator class="native">			
 			 </generator>
 		</id>	
-		
+		<property name="nome"></property>
 		<property name="ano"/>	
 		<property name="capacidade"/>
 		<property name="chassi"/>

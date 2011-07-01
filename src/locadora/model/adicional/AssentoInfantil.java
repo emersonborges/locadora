@@ -30,21 +30,11 @@ public class AssentoInfantil extends Adicional{
         System.out.println("Assento Infantil adicionado, tamanho: " + this.tamanho.toString());
     }
 
-    public double getPreco() {
-        return this.getPreco() + getAutomovelDecorado().getPreco();
-    }
-
 	public Character getTamanho() {
 		return tamanho;
 	}
 
 	public void setTamanho(Character tamanho) {
 		this.tamanho = tamanho;
-	}
-
-	public void setPreco(double preco) {
-		setPreco(preco);
-	}
-
-   
+	}   
 }

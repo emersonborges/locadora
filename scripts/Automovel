@@ -1,5 +1,5 @@
-insert into Automovel values (null,2001,4,123456789,1,20,'PRETO','A','ABC-1234',15000,'disponivel');
-insert into Automovel values (null,200,4,4586297812,1,20,'BRANCO','B','ABC-1245',16000,'alugado');
-insert into Automovel values (null,2003,4,165794237,1,20,'AZUL','C','CDA-1234',17000,'manutencao');
-insert into Automovel values (null,2004,4,123456789,1,20,'VERMELHO','A','JKO-1234',18000,'disponivel');
-insert into Automovel values (null,2005,4,987654321,1,20,'PRETO','C','ABC-1234',19000,'alugado');
+insert into Automovel values (null,'GOL',2001,4,123456789,1,20,'PRETO','A','ABC-1234',15000,'disponivel');
+insert into Automovel values (null,'ZAFIRA',200,4,4586297812,1,20,'BRANCO','B','ABC-1245',16000,'alugado');
+insert into Automovel values (null,'PUNTO',2003,4,165794237,1,20,'AZUL','C','CDA-1234',17000,'manutencao');
+insert into Automovel values (null,'UNO',2004,4,123456789,1,20,'VERMELHO','A','JKO-1234',18000,'disponivel');
+insert into Automovel values (null,'PALIO',2005,4,987654321,1,20,'PRETO','C','ABC-1234',19000,'alugado');
