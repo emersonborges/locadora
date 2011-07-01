@@ -1,5 +1,4 @@
 package locadora.padroes;
-import locadora.model.automovel.Automovel.Status;
 import locadora.model.automovel.Carro;
 import locadora.model.cliente.ClienteGOLD;
 import locadora.model.cliente.ClienteNormal;
@@ -36,7 +35,7 @@ public class ObserverTest {
 	@Test
 	public void clientReceivedNotification(){
 		carro.registra(cliente);
-		carro.setStatus(Status.manutencao);
+		carro.setStatus("manutencao");
 		assertEquals("NORMAL", cliente.getUpdateStatus());
 	}
 	
@@ -61,7 +60,7 @@ public class ObserverTest {
 		carro.registra(vip);
 		carro.registra(cliente);
 	
-		carro.setStatus(Status.disponivel);
+		carro.setStatus("disponivel");
 	
 		String[] expectedStatus = {"GOLD", "VIP", "NORMAL"};
 		String[] status = new String[3];

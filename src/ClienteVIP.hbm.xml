@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/06/2011 15:08:10 by Hibernate Tools 3.4.0.CR1 -->
+
+<hibernate-mapping>
+
+ 
+    <subclass name="locadora.model.cliente.ClienteVIP" extends="locadora.model.cliente.Cliente" discriminator-value="VIP">    	 
+        
+        <join table="Cliente_Desconto" optional="true">
+        		<key column="cliente_id" unique="true"></key>
+        		<many-to-one name="desconto" column="desconto_id" not-null="true" unique="true"></many-to-one>
+        </join>
+    
+    </subclass>
+   
+
+
+
+</hibernate-mapping>

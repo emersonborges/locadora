@@ -2,15 +2,11 @@ package locadora.model;
 
 import java.util.Date;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import locadora.model.automovel.Automovel;
+import locadora.model.cliente.Cliente;
 
-import javax.persistence.Entity;
 
-@Entity
-@Table(name= "reserva")
+
 public class Reserva {
 
 	private Long id;
@@ -19,6 +15,40 @@ public class Reserva {
 	private Double multa;
 	private Double valor;
 	
+	private Cliente cliente;
+	private Automovel automovel;
+	private Devolucao devolucao;
+	private Locacao locacao;
+	
+	public Reserva(){
+		super();
+	}
+	
+	public Reserva(Cliente c, Automovel a, double valor){
+		setAutomovel(a);
+		setCliente(c);
+		setValor(valor);
+	}
+	
+	public Reserva(Cliente c, Automovel a, Date dateDevolucao, Date dateRetirada, double multa, double valor){
+		this.cliente = c;
+		this.automovel = a;
+		this.dataDevolucao =  dateDevolucao;
+		this.dataRetirada =  dateRetirada;
+		this.multa =  multa;
+		this.valor = valor;
+		
+	}
+	
+	
+	public Devolucao getDevolucao() {
+		return devolucao;
+	}
+
+	public void setDevolucao(Devolucao devolucao) {
+		this.devolucao = devolucao;
+	}
+
 	public Date getDataDevolucao() {
 		return dataDevolucao;
 	}
@@ -56,10 +86,42 @@ public class Reserva {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	public Long getId() {
 		return id;
+	}	
+
+	public Cliente getCliente() {
+		return cliente;
 	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Automovel getAutomovel() {
+		return automovel;
+	}
+
+	public void setAutomovel(Automovel automovel) {
+		this.automovel = automovel;
+	}
+
+	public Locacao getLocacao() {
+		return locacao;
+	}
+
+	public void setLocacao(Locacao locacao) {
+		this.locacao = locacao;
+	}
+
+	@Override
+	public String toString() {
+		return "Reserva [id=" + id + ", dataDevolucao=" + dataDevolucao
+				+ ", dataRetirada=" + dataRetirada + ", multa=" + multa
+				+ ", valor=" + valor + "]";
+	}
+	
+	
 	
 }

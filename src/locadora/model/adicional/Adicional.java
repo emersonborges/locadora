@@ -5,28 +5,74 @@
 
 package locadora.model.adicional;
 
-import locadora.model.automovel.*;
 
 /**
  *
  * @author a90633
  */
-public abstract class Adicional extends Automovel {
+public abstract class Adicional implements IAutomovelComponente {
 
-    Automovel automovelDecorado;
-    private String decricao;
+	private Long id;   
+	private IAutomovelComponente automovelDecorado;    
+    private String descricao;
+    private double preco;
     
+  	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 
     public String getDecricao() {
-        return decricao;
+        return descricao;
     }
 
     public void setDecricao(String decricao) {
-        this.decricao = decricao;
+        this.descricao = decricao;
+    }    
+
+	/**
+	 * @param automovelDecorado the automovelDecorado to set
+	 */
+	public void setAutomovelDecorado(IAutomovelComponente automovelDecorado) {
+		this.automovelDecorado = automovelDecorado;
+	}
+
+	/**
+	 * @return the automovelDecorado
+	 */
+	public IAutomovelComponente getAutomovelDecorado() {
+		return automovelDecorado;
+	}
+
+	@Override
+	public String toString() {
+		return "Adicional [id=" + id + ", decricao=" + descricao + "]";
+	}
+	
+    @Override
+    public double getPreco() {
+        return this.preco + getAutomovelDecorado().getPreco();
     }
 
+    public void setPrecoTotal(double p){
+    	this.preco = p;
+    }
     
-    @Override
-    public abstract double getPreco();
+    public double getPrecoAdicional() {
+        return this.preco;
+    }
+    
+    public void setPreco(double p){
+    	this.preco = p;
+    }
+	
+    
+    
+	
+	
 
 }

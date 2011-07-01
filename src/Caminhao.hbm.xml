@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "
+-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+		<joined-subclass name="locadora.model.automovel.Caminhao" extends="locadora.model.automovel.Automovel">
+			<key column="Automovel_id"/>
+		
+			<property name="altura"></property>
+			<property name="carga"></property>
+			<property name="peso"></property>
+					
+		</joined-subclass>
+		
+
+</hibernate-mapping>

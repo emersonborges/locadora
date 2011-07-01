@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "
+-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>	
+		
+	<class name="locadora.model.Reserva">
+		
+		<id column="automovel_id" name="id" type="java.lang.Long">
+			<generator class="foreign">			
+			<param name="property">automovel</param>			
+			</generator>
+		</id>	
+		
+				
+		<property name="dataDevolucao"/>	
+		<property name="dataRetirada"/>
+		<property name="multa"/>	
+		<property name="valor"/>  		
+	   
+        
+        <many-to-one name="cliente" class="locadora.model.cliente.Cliente" column="cliente_id"/>
+        <one-to-one name="devolucao" class="locadora.model.Devolucao" cascade="save-update"></one-to-one>
+	    <one-to-one name="locacao" class="locadora.model.Locacao" cascade="save-update"></one-to-one>
+	    
+	    <one-to-one name="automovel" class="locadora.model.automovel.Automovel" constrained="true"></one-to-one>
+				
+		
+	</class>
+
+</hibernate-mapping>
+
+

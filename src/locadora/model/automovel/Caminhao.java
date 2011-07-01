@@ -16,6 +16,12 @@ public class Caminhao extends Automovel{
     private float altura;
     private double carga;
     private float peso;
+    
+    public Caminhao(float altura, double carga, float preso){
+    	setAltura(altura);
+    	setCarga(carga);
+    	setPeso(preso);
+    }
 
     public float getAltura() {
         return altura;
@@ -40,6 +46,15 @@ public class Caminhao extends Automovel{
     public void setPeso(float peso) {
         this.peso = peso;
     }
+    
+    public Caminhao(){
+    	super();
+    }
+
+	@Override
+	public double getPreco() {
+		return getPreco();
+	}
 
     
 

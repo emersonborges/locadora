@@ -1,7 +1,8 @@
 package locadora.model.automovel;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
+import locadora.model.adicional.IAutomovelComponente;
 import locadora.model.observer.*;
 
 /*
@@ -13,10 +14,15 @@ import locadora.model.observer.*;
  *
  * @author a90633
  */
-public abstract class Automovel extends Subject{
+public abstract class Automovel extends Subject implements IAutomovelComponente{
 
-    List<Automovel> adicionais = new ArrayList<Automovel>();
-
+	
+    private Set adicionais = new HashSet();
+	private Set categorias = new HashSet();
+	
+	
+	
+    private Long id;
     private int ano;
     private int capacidade;
     private String chassi;
@@ -24,19 +30,38 @@ public abstract class Automovel extends Subject{
     private int consumo;
     private String cor;//não tem pq usar o tipo color
     private int modelo;
-    private Enum<Combustivel> combustivel;
+    private String combustivel;
     private String placa;
     private double preco;
-    private Enum<Status> status;
-   
+    private String status;
+    private String nome;
     
+/*    private Reserva reserva;*/
     
-    public List<Automovel> getAdicionais() {
+
+
+	public Set getAdicionais() {
 		return adicionais;
 	}
 
-	public void setAdicionais(List<Automovel> adicionais) {
+	public void setAdicionais(Set adicionais) {
 		this.adicionais = adicionais;
+	}
+
+	public Set getCategorias() {
+		return categorias;
+	}
+
+	public void setCategorias(Set categorias) {
+		this.categorias = categorias;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public int getAno() {
@@ -45,7 +70,7 @@ public abstract class Automovel extends Subject{
 
 	public void setAno(int ano) {
 		this.ano = ano;
-	}
+	}	
 
 	public int getCapacidade() {
 		return capacidade;
@@ -95,11 +120,13 @@ public abstract class Automovel extends Subject{
 		this.modelo = modelo;
 	}
 
-	public Enum<Combustivel> getCombustivel() {
+	
+
+	public String getCombustivel() {
 		return combustivel;
 	}
 
-	public void setCombustivel(Enum<Combustivel> combustivel) {
+	public void setCombustivel(String combustivel) {
 		this.combustivel = combustivel;
 	}
 
@@ -112,16 +139,16 @@ public abstract class Automovel extends Subject{
 	}
 
 	public Boolean estaDisponivel(){
-        if (this.status.equals(Status.disponivel))
+        if (this.status=="disponivel")
             return true;
         return false;
-    }
+    }    
 
-    public double getPreco(){
-        return this.preco;
-    }
+    public double getPreco() {
+		return preco;
+	}
 
-    public void setPreco(double preco){
+	public void setPreco(double preco){
         this.preco=preco;
     }
 
@@ -135,14 +162,40 @@ public abstract class Automovel extends Subject{
 
     public void addAdicionais(Automovel a){
         adicionais.add(a);
-    }
+    }   
 
-    public String getStatus(){
-        return this.status.toString();
-    }
-    public void setStatus(Enum<Status> status) {
-        this.status = status;
-        this.notifica();
-    }
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "Automovel [id=" + id + ", ano=" + ano + ", capacidade="
+				+ capacidade + ", chassi=" + chassi + ", codCategoria="
+				+ codCategoria + ", consumo=" + consumo + ", cor=" + cor
+				+ ", modelo=" + modelo + ", combustivel=" + combustivel
+				+ ", placa=" + placa + ", preco=" + preco + ", status="
+				+ status + "]";
+	}
+
+	/**
+	 * @param nome the nome to set
+	 */
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	/**
+	 * @return the nome
+	 */
+	public String getNome() {
+		return nome;
+	}
+  
+	
 
 }

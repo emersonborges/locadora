@@ -4,7 +4,6 @@
  */
 
 package locadora.model.adicional;
-import locadora.model.automovel.*;
 
 /**
  *
@@ -12,38 +11,27 @@ import locadora.model.automovel.*;
  */
 public class TanqueCheio extends Adicional {
 
-    private double capacidade;
-    private double preco;
+    private int capacidade;
+    
 
-     public TanqueCheio(Automovel a,double preco,double capacidade){
-        this.automovelDecorado = a;
-        this.automovelDecorado.addAdicionais(this);
-        this.preco = preco;
+    public TanqueCheio(){
+    	super();
+    }
+    
+    public TanqueCheio(IAutomovelComponente a,double preco,int capacidade){
+        this.setAutomovelDecorado(a);
+        //this.getAutomovelDecorado().addAdicionais(this);
+        setPreco(preco);
         this.capacidade=capacidade;
-
-        System.out.println("Tanque cheio adicionado, valor: "+ this.preco);
-
+        System.out.println("Tanque cheio adicionado, valor: "+ getPreco());
     }
 
-     public double getPreco() {
-        return preco + automovelDecorado.getPreco();
-    }
-/*
-    public double getTotal(){
-        return preco*capacidade;
-    }
+	public int getCapacidade() {
+		return capacidade;
+	}
 
-    public int getCapacidade() {
-        return capacidade;
-    }
-
-    public void setCapacidade(int capacidade) {
-        this.capacidade = capacidade;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-*/
-
+	public void setCapacidade(int capacidade) {
+		this.capacidade = capacidade;
+	}
+	
 }

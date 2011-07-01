@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/06/2011 15:05:25 by Hibernate Tools 3.4.0.CR1 -->
+
+<hibernate-mapping>
+
+    <class name="locadora.model.desconto.Desconto" abstract="true">
+       
+        <id name="id" type="java.lang.Long" column="desconto_id">
+            <generator class="native"></generator>
+        </id>
+        
+         <discriminator column="Desconto_tipo" type="string"/>          
+               
+        
+        <subclass name="locadora.model.desconto.SemDesconto" discriminator-value="NORMAL">
+          <property name="desconto"/>     
+        </subclass>
+        
+        <subclass name="locadora.model.desconto.DescontoGOLD" discriminator-value="GOLD">
+          <property name="desconto"/>     
+        </subclass>
+             
+         <subclass name="locadora.model.desconto.DescontoVIP" discriminator-value="VIP">
+          <property name="desconto"/>     
+        </subclass>             
+             
+    </class>
+      
+</hibernate-mapping>
+
+

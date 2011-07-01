@@ -1,6 +1,7 @@
 package locadora.model;
 
 public class Atendente extends Funcionario{
+	
 	public void addAtendente(){
 		
 	}

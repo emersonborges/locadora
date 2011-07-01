@@ -14,12 +14,37 @@ import locadora.model.automovel.Automovel;
  */
 public class Carro extends Automovel {
 
-    private boolean airbag;
+   
+
+	private boolean airbag;
     private boolean som;
     private boolean arcondicionado;
     private int nportas;
+    
+    public Carro(){
+    	super();
+    }
+    
+    public Carro(int ano, double preco){
+    	setAno(ano);
+    	setPreco(preco);
+    	setAirbag(true);
+    	setSom(true);
+    	setArcondicionado(true);
+    	setNportas(4);
+    }
 
-   
+    public Carro(int ano, String cor, String comb, int preco, String status){
+    	setAno(ano);
+    	setCor(cor);
+    	setCombustivel(comb);
+    	setPreco(preco);
+    	setStatus(status);
+    }
+
+	public boolean isAirbag() {
+		return airbag;
+	}
 
     public void setAirbag(boolean airbag) {
         this.airbag = airbag;

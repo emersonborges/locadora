@@ -12,7 +12,8 @@ package locadora.model.observer;
 
 //Observador
 public abstract class Observer {
-    private Subject subject;
+    
+	private Subject subject;
 
     public abstract void update(Subject s);
 }
